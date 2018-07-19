@@ -1,8 +1,8 @@
 import sys from 'native-system-components'
-import {Text} from 'react-primitives'
+import {Text as TextAlias} from 'react-primitives'
 
 export const Text = sys({
-  is: Text,
+  is: TextAlias,
   m: 0
 },
   'space',
