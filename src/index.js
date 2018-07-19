@@ -1,4 +1,4 @@
-export { Flex, Box } from 'grid-styled'
+export { Flex, Box } from 'native-grid-styled'
 
 export { default as theme } from './theme'
 export { colors, createColors } from './colors'

@@ -1,6 +1,6 @@
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
-import { Box } from 'grid-styled'
+import { Box } from 'native-grid-styled'
 
 import { invertLuminance } from './colors'
 import defaultTheme from './theme'

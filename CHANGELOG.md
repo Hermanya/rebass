@@ -10,9 +10,9 @@
 ### Changed
 
 - [styled-system](https://github.com/jxnblk/styled-system) v2
-- [grid-styled](https://github.com/jxnblk/grid-styled) v4
+- [native-grid-styled](https://github.com/hermanya/native-grid-styled) v4
 - Moves components to separate modules
-- Uses [system-components](https://github.com/jxnblk/styled-system/tree/master/system-components)
+- Uses [native-system-components](https://github.com/jxnblk/styled-system/tree/master/native-system-components)
 - Updates docs site
 
 #### Breaking

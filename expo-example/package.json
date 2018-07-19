@@ -1,0 +1,16 @@
+{
+  "main": "node_modules/expo/AppEntry.js",
+  "private": true,
+  "scripts": {
+    "start": "node_modules/react-native/packager/packager.sh"
+  },
+  "dependencies": {
+    "expo": "^28.0.0",
+    "native-grid-styled": "^5.0.3",
+    "native-system-components": "^3.0.0",
+    "react": "16.3.1",
+    "react-native": "^0.42.0",
+    "rebass-native": "git+https://github.com/hermanya/rebass-native.git",
+    "styled-components": "^3.3.3"
+  }
+}

@@ -1,5 +1,5 @@
-import sys from 'system-components'
-import { Box } from 'grid-styled'
+import sys from 'native-system-components'
+import { Box } from 'native-grid-styled'
 
 export const Container = sys({
   is: Box,

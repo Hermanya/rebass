@@ -1,4 +1,4 @@
-import sys from 'system-components'
+import sys from 'native-system-components'
 import { theme } from 'styled-system'
 
 export const Input = sys({

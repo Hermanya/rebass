@@ -1,5 +1,5 @@
 import React from 'react'
-import sys from 'system-components'
+import sys from 'native-system-components'
 import Heading from './Heading'
 
 const Base = props =>

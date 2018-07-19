@@ -1,5 +1,5 @@
-import sys from 'system-components'
-import { Flex } from 'grid-styled'
+import sys from 'native-system-components'
+import { Flex } from 'native-grid-styled'
 import { theme } from 'styled-system'
 
 export const Group = sys({

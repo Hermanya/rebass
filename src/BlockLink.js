@@ -1,7 +1,8 @@
-import sys from 'system-components'
+import sys from 'native-system-components'
+import {Touchable} from 'react-primitives'
 
 export const BlockLink = sys({
-  is: 'a',
+  is: Touchable,
   color: 'inherit'
 }, {
   display: 'block',

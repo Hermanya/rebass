@@ -1,6 +1,6 @@
 import React from 'react'
-import sys from 'system-components'
-import { Box } from 'grid-styled'
+import sys from 'native-system-components'
+import { Box } from 'native-grid-styled'
 
 const withHidden = Component => ({
   xs,

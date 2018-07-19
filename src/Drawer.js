@@ -1,6 +1,6 @@
-import sys from 'system-components'
+import sys from 'native-system-components'
 import { space, color, zIndex } from 'styled-system'
-import { Box } from 'grid-styled'
+import { Box } from 'native-grid-styled'
 
 const transforms = {
   left: 'translateX(-100%)',

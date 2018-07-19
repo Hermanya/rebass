@@ -1,4 +1,4 @@
-import sys from 'system-components'
+import sys from 'native-system-components'
 import Text from './Text'
 
 export const Measure = sys({

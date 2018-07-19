@@ -58,7 +58,7 @@ import * as Rebass from 'rebass/emotion'
 
 - Kickstart your own React component library
 - Responsive style props from [styled-system][system]
-- Flexbox grid with [grid-styled][gs]
+- Flexbox grid with [native-grid-styled][gs]
 - Support for [styled-components][sc] & [emotion][emotion]
 - Functional stateless UI components
 - Configurable theming
@@ -115,12 +115,12 @@ for more on some of the thought behind Rebass.
 ### Related
 
 - [styled-system][system]
-- [grid-styled][gs]
+- [native-grid-styled][gs]
 - [styled-components][sc]
 - [emotion][emotion]
 
 [system]: https://github.com/jxnblk/styled-system
-[gs]: https://github.com/jxnblk/grid-styled
+[gs]: https://github.com/hermanya/native-grid-styled
 [sc]: https://github.com/styled-components/styled-components
 [emotion]: https://github.com/emotion-js/emotion
 

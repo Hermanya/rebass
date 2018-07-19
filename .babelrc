@@ -12,16 +12,16 @@
           {
             "replacements": [
               {
-                "original": "^system-components$",
-                "replacement": "system-components/emotion"
+                "original": "^native-system-components$",
+                "replacement": "native-system-components/emotion"
               },
               {
                 "original": "^styled-components$",
                 "replacement": "emotion-theming"
               },
               {
-                "original": "^grid-styled$",
-                "replacement": "grid-styled/emotion"
+                "original": "^native-grid-styled$",
+                "replacement": "native-grid-styled/emotion"
               }
             ]
           }

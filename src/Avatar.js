@@ -1,7 +1,7 @@
-import sys from 'system-components'
-
+import sys from 'native-system-components'
+import {Image} from 'react-primitives'
 export const Avatar = sys({
-  is: 'img',
+  is: Image,
   size: 48,
   borderRadius: '99999px',
 }, {

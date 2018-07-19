@@ -1,5 +1,5 @@
 import React from 'react'
-import sys from 'system-components'
+import sys from 'native-system-components'
 
 const DonutBase = props => {
   const R = 16 - props.strokeWidth

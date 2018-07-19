@@ -1,5 +1,5 @@
 import React from 'react'
-import sys from 'system-components'
+import sys from 'native-system-components'
 import { themeGet } from 'styled-system'
 
 const arrow = encodeURI(`data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewbox='0 0 32 32' fill='currentcolor'> <path d='M0 6 L32 6 L16 28 z' /> </svg>`)

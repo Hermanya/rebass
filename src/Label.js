@@ -1,4 +1,4 @@
-import sys from 'system-components'
+import sys from 'native-system-components'
 
 export const Label = sys({
   is: 'label',
