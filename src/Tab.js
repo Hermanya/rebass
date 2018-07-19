@@ -1,7 +1,7 @@
 import sys from 'native-system-components'
-
+import {Touchable} from 'react-primitives'
 export const Tab = sys({
-  is: 'a',
+  is: Touchable,
   fontSize: 1,
   fontWeight: 'bold',
   mr: 3,

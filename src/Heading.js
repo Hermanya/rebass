@@ -1,8 +1,8 @@
 import React from 'react'
 import sys from 'native-system-components'
-
+import { Text } from 'react-primitives'
 export const Heading = sys({
-  is: 'h2',
+  is: Text,
   fontSize: 5,
   fontWeight: 'bold',
   lineHeight: 1.25,
@@ -15,11 +15,11 @@ export const Heading = sys({
 
 Heading.displayName = 'Heading'
 
-Heading.h1 = props => <Heading {...props} is='h1' />
-Heading.h2 = props => <Heading {...props} is='h2' />
-Heading.h3 = props => <Heading {...props} is='h3' />
-Heading.h4 = props => <Heading {...props} is='h4' />
-Heading.h5 = props => <Heading {...props} is='h5' />
-Heading.h6 = props => <Heading {...props} is='h6' />
+Heading.h1 = props => <Heading {...props} is={Text} />
+Heading.h2 = props => <Heading {...props} is={Text} />
+Heading.h3 = props => <Heading {...props} is={Text} />
+Heading.h4 = props => <Heading {...props} is={Text} />
+Heading.h5 = props => <Heading {...props} is={Text} />
+Heading.h6 = props => <Heading {...props} is={Text} />
 
 export default Heading

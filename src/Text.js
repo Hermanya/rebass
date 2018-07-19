@@ -1,6 +1,8 @@
 import sys from 'native-system-components'
+import {Text} from 'react-primitives'
 
 export const Text = sys({
+  is: Text,
   m: 0
 },
   'space',

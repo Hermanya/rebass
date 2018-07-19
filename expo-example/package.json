@@ -2,15 +2,21 @@
   "main": "node_modules/expo/AppEntry.js",
   "private": true,
   "scripts": {
-    "start": "node_modules/react-native/packager/packager.sh"
+    "test": "node ./node_modules/jest/bin/jest.js --watchAll"
+  },
+  "jest": {
+    "preset": "jest-expo"
   },
   "dependencies": {
+    "@expo/samples": "2.1.1",
     "expo": "^28.0.0",
-    "native-grid-styled": "^5.0.3",
-    "native-system-components": "^3.0.0",
     "react": "16.3.1",
-    "react-native": "^0.42.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-28.0.0.tar.gz",
+    "react-navigation": "2.3.1",
     "rebass-native": "git+https://github.com/hermanya/rebass-native.git",
     "styled-components": "^3.3.3"
+  },
+  "devDependencies": {
+    "jest-expo": "^28.0.0"
   }
 }

@@ -1,6 +1,6 @@
 import sys from 'native-system-components'
 import { themeGet } from 'styled-system'
-import {Touchable} from 'react-primitives'
+import { Touchable } from 'react-primitives'
 
 export const Button = sys({
   is: Touchable,
