@@ -5,7 +5,7 @@ export const Heading = sys({
   is: Text,
   fontSize: 5,
   fontWeight: 'bold',
-  lineHeight: 1.25,
+  // lineHeight: 1.25,
   m: 0
 },
   'fontFamily',

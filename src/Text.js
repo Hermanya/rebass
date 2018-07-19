@@ -11,7 +11,7 @@ export const Text = sys({
   'fontSize',
   'fontWeight',
   'textAlign',
-  'lineHeight'
+  // 'lineHeight'
 )
 
 Text.displayName = 'Text'
