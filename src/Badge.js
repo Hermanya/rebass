@@ -5,14 +5,14 @@ export const Badge = sys({
   px: 2,
   py: 1,
   mx: 1,
-  color: 'white',
+  // color: 'white',
   bg: 'blue',
   fontWeight: 'bold',
   borderRadius: 2
 }, {
-  WebkitFontSmoothing: 'antialiased',
-  display: 'inline-block',
-  verticalAlign: 'middle'
+  // WebkitFontSmoothing: 'antialiased',
+  // display: 'inline-block',
+  // verticalAlign: 'middle'
 })
 
 Badge.displayName = 'Badge'

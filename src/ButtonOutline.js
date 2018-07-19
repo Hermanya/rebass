@@ -4,14 +4,15 @@ import Button from './Button'
 
 export const ButtonOutline = sys({
   is: Button,
-  color: 'blue',
   bg: 'transparent',
-  hover: {
-    color: 'white',
-    backgroundColor: 'blue',
-  }
+  // hover: {
+  //   color: 'white',
+  //   backgroundColor: 'blue',
+  // }
 }, props => ({
-  boxShadow: `inset 0 0 0 2px ${themeGet('colors.' + props.color, props.color)(props)}`,
+  borderWidth: 2,
+  borderColor: themeGet('colors.' + props.color, props.color)(props),
+  borderStyle: 'solid'
 }))
 
 ButtonOutline.displayName = 'ButtonOutline'

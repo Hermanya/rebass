@@ -5,7 +5,7 @@ export const Close = sys({
   is: ButtonTransparent,
   p: 0,
   fontSize: 3,
-  lineHeight: 1,
+  // lineHeight: 1,
   children: '×'
 }, {
   width: '24px',

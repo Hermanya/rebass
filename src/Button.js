@@ -14,6 +14,11 @@ const ButtonBody = sys({
   border: 0,
 },
 props => ({
+  borderWidth: 2,
+  borderColor: 'transparent',
+  borderStyle: 'solid'
+}),
+props => ({
   // fontFamily: 'inherit',
   // WebkitFontSmoothing: 'antialiased',
   // display: 'inline-block',
@@ -40,9 +45,9 @@ const ButtomText = sys({
   textAlign: 'center',
 }, 'color');
 
-export const Button = ({ children, color, ...props }) => (
-  <Touchable {...props}>
-    <ButtonBody>
+export const Button = ({ children, color, onPress, disabled, ...props }) => {
+  return (<Touchable onPress={onPress} disabled={disabled}>
+    <ButtonBody {...props}>
       {typeof children === 'string'
         ? (
           <ButtomText color={color}>
@@ -51,7 +56,7 @@ export const Button = ({ children, color, ...props }) => (
         ) : children}
     </ButtonBody>
   </Touchable>
-);
+)};
 
 
 Button.displayName = 'Button';
