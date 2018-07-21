@@ -3,7 +3,6 @@ import sys from 'native-system-components';
 import { themeGet } from 'styled-system';
 import { Touchable, View } from 'react-primitives';
 import Text from './Text';
-
 const ButtonBody = sys({
   is: View,
   m: 0,
@@ -12,10 +11,11 @@ const ButtonBody = sys({
   bg: 'blue',
   borderRadius: 2,
   border: 0,
+  justifyContent: 'center'
 },
 props => ({
   borderWidth: 2,
-  borderColor: 'transparent',
+  borderColor: themeGet(`colors.${props.bg}`, props.bg)(props),
   borderStyle: 'solid'
 }),
 props => ({
@@ -45,12 +45,12 @@ const ButtomText = sys({
   textAlign: 'center',
 }, 'color');
 
-export const Button = ({ children, color, onPress, disabled, ...props }) => {
+export const Button = ({ children, textColor, onPress, disabled, ...props }) => {
   return (<Touchable onPress={onPress} disabled={disabled}>
     <ButtonBody {...props}>
       {typeof children === 'string'
         ? (
-          <ButtomText color={color}>
+          <ButtomText color={textColor}>
             {children}
           </ButtomText>
         ) : children}

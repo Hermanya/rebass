@@ -1,14 +1,19 @@
+import React from 'react'
 import sys from 'native-system-components'
 import Text from './Text'
 import { letterSpacing } from 'styled-system'
 
-export const Caps = sys({
+const CapsBody = sys({
   is: Text,
   fontSize: 0,
-  letterSpacing: '0.2em'
-}, {
-  textTransform: 'uppercase'
+  letterSpacing: 4
+// }, {
+//   textTransform: 'uppercase'
 })
+
+export const Caps = ({children, ...props}) => <CapsBody children={
+  typeof children === 'string' ? children.toUpperCase() : children
+} {...props}/>
 
 Caps.displayName = 'Caps'
 

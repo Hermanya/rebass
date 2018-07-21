@@ -4,10 +4,8 @@ export { default as theme } from './theme'
 export { colors, createColors } from './colors'
 
 export { Base } from './Base'
-export { CSS } from './CSS'
 export { Root } from './Root'
 export { Provider } from './Provider'
-export { DarkMode, invertTheme } from './DarkMode'
 
 export { Button } from './Button'
 export { ButtonOutline } from './ButtonOutline'

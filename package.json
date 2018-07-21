@@ -34,6 +34,7 @@
     "native-grid-styled": "^5.0.3",
     "native-system-components": "^3.0.0",
     "prop-types": "^15.6.0",
+    "react-primitives-svg": "0.0.3",
     "styled-system": "^2.3.1"
   },
   "devDependencies": {

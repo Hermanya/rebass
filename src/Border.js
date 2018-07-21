@@ -1,7 +1,8 @@
 import sys from 'native-system-components'
 
 export const Border = sys({
-  border: 1,
+  borderWidth: 1,
+  borderStyle: 'solid',
   borderColor: 'gray'
 }, 'space', 'width', 'color')
 

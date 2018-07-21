@@ -1,12 +1,12 @@
+import React from 'react';
 import sys from 'native-system-components'
+import Button from './Button'
 
-export const Checkbox = sys({
-  is: 'input',
-  type: 'checkbox',
-  m: 0,
-  mr: 2,
-}, 'space', 'color')
-
-Checkbox.displayName = 'Checkbox'
-
-export default Checkbox
+export const Checkbox = ({
+  value=false,
+  disabled=false,
+  checkmark='✓️',
+  onChange
+}) => <Button disabled={disabled} onPress={() => onChange(!value)} width={46}>
+    {value ? checkmark : ' '}
+</Button>

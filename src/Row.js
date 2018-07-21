@@ -3,6 +3,7 @@ import { Flex } from 'native-grid-styled'
 
 export const Row = sys({
   is: Flex,
+  flexDirection: 'row',
   mx: -3
 })
 

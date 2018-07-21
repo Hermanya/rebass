@@ -3,15 +3,18 @@ import sys from 'native-system-components'
 export const Arrow = sys({
   direction: 'down'
 }, props => {
-  const borderTop = props.direction === 'down' ? { borderTop: '.4375em solid' } : null
-  const borderBottom = props.direction === 'up' ? { borderBottom: '.4375em solid' } : null
+  const borderTop = props.direction === 'down' ? { borderTopWidth: 7} : null
+  const borderBottom = props.direction === 'up' ? { borderBottomWidth: 7 } : null
   return {
-    display: 'inline-block',
+    // display: 'inline-block',
     width: 0,
     height: 0,
-    verticalAlign: 'middle',
-    borderRight: '.3125em solid transparent',
-    borderLeft: '.3125em solid transparent',
+    // verticalAlign: 'middle',
+    borderStyle: 'solid',
+    borderRightColor: 'transparent',
+    borderRightWidth: 5,
+    borderLeftColor: 'transparent',
+    borderLeftWidth: 5,
     ...borderTop,
     ...borderBottom
   }

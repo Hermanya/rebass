@@ -4,8 +4,8 @@ export const Avatar = sys({
   is: Image,
   size: 48,
   borderRadius: '99999px',
-}, {
-  display: 'inline-block'
+// }, {
+//   display: 'inline-block'
 },
   'space',
   'color',

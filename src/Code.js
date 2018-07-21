@@ -1,9 +1,9 @@
 import sys from 'native-system-components'
-
+import {Text} from 'react-primitives'
 export const Code = sys({
-  is: 'code',
+  is: Text,
   fontSize: 1,
-  fontFamily: 'mono'
+  fontFamily: 'space-mono'
 },
   'fontFamily',
   'space',

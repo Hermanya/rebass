@@ -2,14 +2,8 @@ import sys from 'native-system-components'
 import { space, color, zIndex } from 'styled-system'
 import { Box } from 'native-grid-styled'
 
-const transforms = {
-  left: 'translateX(-100%)',
-  right: 'translateX(100%)',
-  top: 'translateY(-100%)',
-  bottom: 'translateY(100%)',
-}
 export const side = ({ side }) => {
-  if (!transforms[side]) return {
+  if (!['left', 'right', 'top', 'bottom'].includes(side)) return {
     top: 0,
     left: 0,
     bottom: 0
@@ -30,10 +24,19 @@ export const side = ({ side }) => {
 
 export const transform = ({
   open,
-  side
-}) => ({
-  transform: open ? null : transforms[side] || transforms.left
-})
+  side,
+  width
+}) => {
+  const transforms = {
+    left: `translateX(-${width}px)`,
+    right: `translateX(${width}px)`,
+    top: `translateY(-${width}px)`,
+    bottom: `translateY(${width}px)`,
+  }
+  return ({
+    transform: open ? null : transforms[side] || transforms.left
+  })
+}
 
 export const Drawer = sys({
   is: Box,
@@ -41,23 +44,26 @@ export const Drawer = sys({
     'side',
     'open',
   ],
-  position: 'fixed',
-  color: 'white',
+  position: 'absolute',
+  // color: 'white',
   bg: 'black',
   open: false,
   side: 'bottom',
   width: 320,
 }, side,
-  transform,
+transform,
   'zIndex',
   'height',
   {
-  overflowX: 'hidden',
-  overflowY: 'auto',
-  transitionProperty: 'transform',
-  transitionDuration: '.2s',
-  transitionTimingFunction: 'ease-out'
-})
+  // transform: {translateX: -320}
+
+  // overflowX: 'hidden',
+  // overflowY: 'auto',
+  // transitionProperty: 'transform',
+  // transitionDuration: '.2s',
+  // transitionTimingFunction: 'ease-out'
+  }
+)
 
 Drawer.displayName = 'Drawer'
 
