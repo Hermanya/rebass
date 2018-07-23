@@ -5,7 +5,7 @@ import Text from './Text'
 export const Lead = sys({
   is: Text,
   fontSize: 3,
-  lineHeight: 1.25
+  // lineHeight: 1.25
 })
 
 Lead.displayName = 'Lead'

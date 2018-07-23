@@ -13,11 +13,10 @@ import {
   Badge, Blockquote, Border,
     Caps, Card, Checkbox, Circle, Code, Close,
     Divider, Donut, Dot, Drawer,
-    Image
-  } from 'rebass-native';
-import { theme } from 'styled-system'
+    Image,
 
-import { MonoText } from '../components/StyledText';
+    Switch
+  } from 'rebass-native';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -32,7 +31,9 @@ export default class HomeScreen extends React.Component {
         <ScrollView>
           <Container>
           <Heading>Components</Heading>
-
+          <Switch value={this.state.switchOn} onValueChange={() => this.setState({
+            switchOn: !this.state.switchOn
+          })} m={5} color="blue"/>
           <Subhead>Flex</Subhead>
           <Flex flexDirection="row">
             <Box width={[ 1/2 ]} p={3} bg='blue'>

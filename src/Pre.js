@@ -1,12 +1,15 @@
 import sys from 'native-system-components'
-
+import Code from './Code'
+import {Platform} from 'react-primitives'
 export const Pre = sys({
-  is: 'pre',
+  is: {
+    web: 'pre'
+  }[Platform.OS] || Code,
   fontSize: 1,
   fontFamily: 'mono',
   m: 0
-}, {
-  overflow: 'auto'
+// }, {
+//   overflow: 'auto'
 },
   'fontFamily',
   'space',
