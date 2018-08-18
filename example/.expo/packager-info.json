@@ -1,0 +1,9 @@
+{
+  "expoServerPort": 19000,
+  "devToolsPort": 19002,
+  "packagerPort": 19001,
+  "packagerPid": 58846,
+  "expoServerNgrokUrl": "https://zq-8bi.hermanya.example.exp.direct",
+  "packagerNgrokUrl": "https://packager.zq-8bi.hermanya.example.exp.direct",
+  "ngrokPid": 58861
+}
