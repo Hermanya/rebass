@@ -1,7 +1,7 @@
 {
   "name": "rebass-native",
   "version": "2.2.0",
-  "description": "Flexible & functional React design system, built with styled-system",
+  "description": "Flexible & functional React native design system, built with styled-system",
   "main": "src/index.js",
   "sideEffects": false,
   "scripts": {
@@ -11,8 +11,8 @@
   },
   "keywords": [
     "components",
-    "react",
-    "react-component",
+    "react-native",
+    "react-native-component",
     "ui",
     "design-system",
     "styled-system",
@@ -62,12 +62,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jxnblk/rebass.git"
+    "url": "https://github.com/Hermanya/rebass-native.git"
   },
   "bugs": {
-    "url": "https://github.com/jxnblk/rebass/issues"
+    "url": "https://github.com/Hermanya/rebass-native/issues"
   },
-  "homepage": "https://github.com/jxnblk/rebass",
+  "homepage": "https://github.com/Hermanya/rebass-native",
   "jest": {
     "roots": [
       "<rootDir>/test/"

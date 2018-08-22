@@ -41,11 +41,11 @@ const createNav = routes => [
   {
     key: 'github',
     name: 'GitHub',
-    path: 'https://github.com/jxnblk/rebass',
+    path: 'https://github.com/hermanya/rebass-native',
   },
   {
     key: 'jxnblk',
-    name: 'Made by Jxnblk',
+    name: 'Based on work of Jxnblk',
     path: 'https://jxnblk.com',
   },
 ]

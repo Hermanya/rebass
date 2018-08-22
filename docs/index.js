@@ -93,7 +93,7 @@ const Hero = connect(props => (
           />
           <SecondaryButton
             is='a'
-            href='https://github.com/jxnblk/rebass'
+            href='https://github.com/hermanya/rebass-native'
             fontSize={2}
             color='white'
             children='GitHub'
@@ -110,18 +110,18 @@ const Hero = connect(props => (
           <BlockLink
             mr={2}
             py={2}
-            href='https://travis-ci.org/jxnblk/rebass'>
+            href='https://travis-ci.org/hermanya/rebass-native'>
             <Image
-              src='https://img.shields.io/travis/jxnblk/rebass/master.svg'
+              src='https://img.shields.io/travis/hermanya/rebass-native/master.svg'
             />
           </BlockLink>
           <BlockLink
             ml={2}
             mr={3}
             py={2}
-            href='https://github.com/jxnblk/rebass'>
+            href='https://github.com/hermanya/rebass-native'>
             <Image
-              src='https://img.shields.io/github/stars/jxnblk/rebass.svg?style=social&label=Star'
+              src='https://img.shields.io/github/stars/hermanya/rebass-native.svg?style=social&label=Star'
             />
           </BlockLink>
           {false && <Tweet />}
@@ -276,7 +276,7 @@ const CTA = props =>
 
 const Footer = props =>
   <Flex mx={-2}>
-    <NavLink href='https://github.com/jxnblk/rebass'>
+    <NavLink href='https://github.com/hermanya/rebass-native'>
       GitHub
     </NavLink>
     <NavLink href='https://jxnblk.com'>

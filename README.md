@@ -1,35 +1,31 @@
+# Rebass-native
 
-<img src='docs/logo.svg' width='128' height='128' />
-
-# Rebass
-
-React UI component library & design system,
+Port of Rebass for react-native, a UI component library & design system,
 built with [styled-system][system],
 with support for
-[styled-components][sc] & [emotion][emotion].
+[styled-components][sc].
 
 [![Build Status][badge]][travis]
 [![Coverage][coverage-badge]][coverage]
 [![Downloads][downloads-badge]][npm]
 [![Version][version-badge]][npm]
 
-[badge]: https://img.shields.io/travis/jxnblk/rebass.svg?style=flat-square
-[travis]: https://travis-ci.org/jxnblk/rebass
-[coverage-badge]: https://img.shields.io/codecov/c/github/jxnblk/rebass.svg?style=flat-square
-[coverage]: https://codecov.io/github/jxnblk/rebass
+[badge]: https://img.shields.io/travis/hermanya/rebass-native.svg?style=flat-square
+[travis]: https://travis-ci.org/hermanya/rebass-native
+[coverage-badge]: https://img.shields.io/codecov/c/github/hermanya/rebass-native.svg?style=flat-square
+[coverage]: https://codecov.io/github/hermanya/rebass-native
 
-[downloads-badge]: https://img.shields.io/npm/dw/rebass.svg?style=flat-square
-[version-badge]: https://img.shields.io/npm/v/rebass.svg?style=flat-square
-[npm]: https://npmjs.com/package/rebass
+[downloads-badge]: https://img.shields.io/npm/dw/rebass-native.svg?style=flat-square
+[version-badge]: https://img.shields.io/npm/v/rebass-native.svg?style=flat-square
+[npm]: https://npmjs.com/package/rebass-native
 
-http://jxnblk.com/rebass
 
 ```sh
-npm i rebass@next
+npm i rebass-native@next
 ```
 
-Rebass is a library of highly-composable, primitive UI components for React,
-built with styled-components to keep styles isolated and reduce the need to write custom CSS in your application.
+Rebass-native is a port of Rebass, a library of highly-composable, primitive UI components for React,
+built with styled-components to keep styles isolated and reduce the need to write custom Styles in your application.
 Based upon a configurable design system,
 Rebass‘s props API makes building consistent, responsive web apps simpler and faster.
 
@@ -38,7 +34,7 @@ Rebass‘s props API makes building consistent, responsive web apps simpler and 
 
 ```jsx
 import React from 'react'
-import { Provider, Heading, Button } from 'rebass'
+import { Provider, Heading, Button } from 'rebass-native'
 
 const App = props => (
   <Provider>
@@ -48,51 +44,33 @@ const App = props => (
 )
 ```
 
-To use Rebass with [emotion][emotion], import from `rebass/emotion`:
-
-```js
-import * as Rebass from 'rebass/emotion'
-```
-
 ## Features
 
-- Kickstart your own React component library
+- Kickstart your own react-native component library
 - Responsive style props from [styled-system][system]
 - Flexbox grid with [native-grid-styled][gs]
-- Support for [styled-components][sc] & [emotion][emotion]
+- Support for [styled-components][sc]
 - Functional stateless UI components
 - Configurable theming
 - Extensible base components
 - Design-system based consistency
 - Built for responsive web design
 
-
-> "One of the best React component libs out there"
-> – [Max Stoiber](https://twitter.com/mxstbr/status/882657561111080960)
-
-> "Rebass is the Bootstrap of React."
-> – [Jori Lallo](https://twitter.com/jorilallo/status/882990343225868289)
-
-> "A whopper component library built on styled-components. Responsive, systematic, scalable...the business!"
-> – [Colm Tuite](https://twitter.com/colmtuite/status/882715087936606210)
-
-
 ## Documentation
 
-- [Docs](https://jxnblk.com/rebass)
-- [Getting Started](https://jxnblk.com/rebass/getting-started)
-- [Props](https://jxnblk.com/rebass/props)
-- [Grid System](https://jxnblk.com/rebass/grid-system)
-- [Theming](https://jxnblk.com/rebass/theming)
-- [Extending](https://jxnblk.com/rebass/extending)
-- [Components](https://jxnblk.com/rebass/components)
-- [Server-Side Rendering](https://jxnblk.com/rebass/server-side-rendering)
+- [Docs](https://hermanya.github.io/rebass-native)
+- [Getting Started](https://hermanya.github.io/rebass-native/getting-started)
+- [Props](https://hermanya.github.io/rebass-native/props)
+- [Grid System](https://hermanya.github.io/rebass-native/grid-system)
+- [Theming](https://hermanya.github.io/rebass-native/theming)
+- [Extending](https://hermanya.github.io/rebass-native/extending)
+- [Components](https://hermanya.github.io/rebass-native/components)
 
 ## CodeSandbox
 
 Try it out:
 
-https://codesandbox.io/s/github/jxnblk/rebass/tree/master/examples/sandbox
+https://codesandbox.io/s/github/hermanya/rebass-native/tree/master/examples/sandbox
 
 ### Architectural Approach
 
@@ -117,20 +95,13 @@ for more on some of the thought behind Rebass.
 - [styled-system][system]
 - [native-grid-styled][gs]
 - [styled-components][sc]
-- [emotion][emotion]
 
 [system]: https://github.com/jxnblk/styled-system
 [gs]: https://github.com/hermanya/native-grid-styled
 [sc]: https://github.com/styled-components/styled-components
-[emotion]: https://github.com/emotion-js/emotion
-
-#### v1.0.7
-
-For the previous version of Rebass see the [v1.0.7](https://github.com/jxnblk/rebass/tree/v1.0.7) branch.
 
 ---
 
 [Contributing](.github/CONTRIBUTING.md)
 |
 [MIT License](.github/LICENSE.md)
-
