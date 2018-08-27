@@ -12,7 +12,6 @@ export { ButtonOutline } from './ButtonOutline'
 export { ButtonCircle } from './ButtonCircle'
 export { ButtonTransparent } from './ButtonTransparent'
 
-export { Link } from './Link'
 export { NavLink } from './NavLink'
 export { Close } from './Close'
 
@@ -32,17 +31,9 @@ export { Samp } from './Samp'
 export { Measure } from './Measure'
 
 export { Label } from './Label'
-export { Input } from './Input'
-export { Select } from './Select'
-export { Textarea } from './Textarea'
-export { Radio } from './Radio'
-export { Slider } from './Slider'
-export { Switch } from './Switch'
 
 export { Image } from './Image'
-export { BackgroundImage } from './BackgroundImage'
 export { Avatar } from './Avatar'
-export { Embed } from './Embed'
 
 export { Container } from './Container'
 export { Group } from './Group'
@@ -79,6 +70,3 @@ export { Drawer } from './Drawer'
 export { Carousel } from './Carousel'
 
 export { Hide } from './Hide'
-
-// backwards compat
-export { Modal as Overlay } from './Modal'
