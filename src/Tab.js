@@ -6,13 +6,10 @@ export const Tab = sys({
   fontWeight: 'bold',
   mr: 3,
   py: 2,
-  color: 'inherit',
+  color: 'blue',
   borderBottomWidth: 2,
   borderStyle: 'solid',
   borderColor: 'transparent',
-  hover: {
-    color: 'blue'
-  }
 }, {
   textDecoration: 'none'
 })
