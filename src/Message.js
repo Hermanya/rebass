@@ -4,16 +4,16 @@ import { Flex } from 'native-grid-styled'
 import Text from './Text'
 
 class MessageHelper extends React.Component {
-  render() {
+  render () {
     const {children, ...props} = this.props
     return (
       <Flex {...props}>
-  {typeof children === 'string' ? <Text
-      fontWeight={'bold'}
-      color={'white'}
-  >{children}</Text> : children}
-</Flex>
-    );
+        {typeof children === 'string' ? <Text
+          fontWeight={'bold'}
+          color={'white'}
+        >{children}</Text> : children}
+      </Flex>
+    )
   }
 }
 
@@ -24,7 +24,7 @@ export const Message = sys({
   bg: 'blue',
   flexDirection: 'row',
   alignItems: 'center',
-  minHeight: '48px',
+  minHeight: '48px'
 }, 'minHeight', {
   // WebkitFontSmoothing: 'antialiased',
 })

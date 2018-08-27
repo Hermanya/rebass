@@ -1,11 +1,9 @@
-import React from 'react'
 import sys from 'native-system-components'
 import Text from './Text'
 
 export const Lead = sys({
   is: Text,
-  fontSize: 3,
-  // lineHeight: 1.25
+  fontSize: 3
 })
 
 Lead.displayName = 'Lead'

@@ -1,12 +1,25 @@
 import React from 'react'
 import sys from 'native-system-components'
-import Text from './Text'
+import {Box, Text} from './'
+
+const BlockquoteHelper = ({children, textProps, ...props}) =>
+  <Box {...props}>
+    {typeof children === 'string'
+      ? <Text {...textProps}>{children}</Text> : children}
+  </Box>
+
+BlockquoteHelper.displayName = 'BlockquoteHelper'
 
 export const Blockquote = sys({
-  is: Text,
-  fontSize: 3,
-  m: 0
-})
+  is: BlockquoteHelper,
+  borderLeftWidth: 2,
+  borderStyle: 'solid',
+  borderColor: 'blue',
+  m: 0,
+  textProps: {
+    fontSize: 3
+  }
+}, 'maxWidth')
 
 Blockquote.displayName = 'Blockquote'
 

@@ -7,7 +7,7 @@ export const Container = sys({
   mx: 'auto',
   maxWidth: 1024
 },
-  'maxWidth',
+'maxWidth'
 )
 
 Container.displayName = 'Container'

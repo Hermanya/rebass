@@ -17,17 +17,17 @@ export const BadgeBody = sys({
 })
 
 export class Badge extends React.Component {
-  render() {
+  render () {
     const {children, ...props} = this.props
     return (
       <BadgeBody {...props}>
-  {typeof children === 'string' ? <Text
-    fontSize={0}
-    fontWeight="bold"
-    color="white"
-    >{children}</Text> : children}
-</BadgeBody>
-    );
+        {typeof children === 'string' ? <Text
+          fontSize={0}
+          fontWeight='bold'
+          color='white'
+        >{children}</Text> : children}
+      </BadgeBody>
+    )
   }
 }
 

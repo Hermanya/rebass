@@ -3,7 +3,9 @@ import sys from 'native-system-components'
 export const Arrow = sys({
   direction: 'down'
 }, props => {
-  const borderTop = props.direction === 'down' ? { borderTopWidth: 7} : null
+  const borderTop = props.direction === 'down' ? {
+    borderTopWidth: 7
+  } : null
   const borderBottom = props.direction === 'up' ? { borderBottomWidth: 7 } : null
   return {
     // display: 'inline-block',

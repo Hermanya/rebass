@@ -5,12 +5,12 @@ export const Text = sys({
   is: TextAlias,
   m: 0
 },
-  'space',
-  'color',
-  'fontFamily',
-  'fontSize',
-  'fontWeight',
-  'textAlign',
+'space',
+'color',
+'fontFamily',
+'fontSize',
+'fontWeight',
+'textAlign'
   // 'lineHeight'
 )
 

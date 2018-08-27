@@ -13,10 +13,10 @@ export const Banner = sys({
   color: 'white',
   bg: 'black'
 },
-  'minHeight',
-  'backgroundSize',
-  'backgroundPosition',
-  'backgroundImage'
+'minHeight',
+'backgroundSize',
+'backgroundPosition',
+'backgroundImage'
 )
 
 Banner.displayName = 'Banner'

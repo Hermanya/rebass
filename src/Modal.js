@@ -1,6 +1,5 @@
 import sys from 'native-system-components'
-import { themeGet } from 'styled-system'
-import { Absolute } from './Position';
+import { Absolute } from './Position'
 
 export const Modal = sys({
   is: Absolute,
@@ -11,16 +10,16 @@ export const Modal = sys({
   borderRadius: 2,
   // maxWidth: '100vw',
   // maxHeight: '100vh',
-  elevation: 2,
+  elevation: 2
 
 }, props => ({
   // boxShadow: `0 0 0 60vmax ${themeGet('colors.darken')(props)}, 0 0 32px ${themeGet('colors.darken')(props)}`,
   // overflow: 'auto',
-  transform: `translateX(-${props.width/2}px) translateY(-50px)`
+  transform: `translateX(-${props.width / 2}px) translateY(-50px)`
 }),
-  'width',
-  'maxWidth',
-  'maxHeight',
+'width',
+'maxWidth',
+'maxHeight'
 )
 Modal.displayName = 'Modal'
 

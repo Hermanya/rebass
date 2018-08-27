@@ -14,7 +14,7 @@ export const space = [
   16,
   32,
   64,
-  128,
+  128
 ]
 
 export const fontSizes = [
@@ -48,7 +48,7 @@ export const fonts = {
 export const shadows = [
   'none',
   `inset 0 0 0 1px ${colors.gray}`,
-  `inset 0 0 0 1px ${colors.gray}, 0 0 4px ${colors.gray}`,
+  `inset 0 0 0 1px ${colors.gray}, 0 0 4px ${colors.gray}`
 ]
 
 export default {
@@ -59,5 +59,5 @@ export default {
   fonts,
   colors,
   radii,
-  shadows,
+  shadows
 }

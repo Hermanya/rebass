@@ -19,5 +19,4 @@ export const Absolute = sys({
 })
 Absolute.displayName = 'Absolute'
 
-
 export default Position

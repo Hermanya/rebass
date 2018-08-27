@@ -8,7 +8,7 @@ export const Dot = sys({
   bg: 'grey',
   borderRadius: 99999,
   border: 4,
-  borderColor: 'transparent',
+  borderColor: 'transparent'
   // focus: {
   //   backgroundColor: 'blue'
   // },
@@ -22,9 +22,9 @@ export const Dot = sys({
 //   appearance: 'none',
 //   backgroundClip: 'padding-box'
 },
-  'size',
-  'space',
-  'color'
+'size',
+'space',
+'color'
 )
 
 Dot.displayName = 'Dot'

@@ -1,8 +1,8 @@
-import React from 'react';
-import sys from 'native-system-components';
-import { themeGet } from 'styled-system';
-import { Touchable, View } from 'react-primitives';
-import Text from './Text';
+import React from 'react'
+import sys from 'native-system-components'
+import { themeGet } from 'styled-system'
+import { Touchable, View } from 'react-primitives'
+import Text from './Text'
 const ButtonBody = sys({
   is: View,
   m: 0,
@@ -34,7 +34,7 @@ props => ({
   //   outline: 'none',
   //   boxShadow: `0 0 0 2px ${themeGet(`colors.${props.bg}`, props.bg)(props)}`,
   // },
-}));
+}))
 
 const ButtomText = sys({
   is: Text,
@@ -42,8 +42,8 @@ const ButtomText = sys({
   fontWeight: 'bold',
   // lineHeight: 16 / 14,
   color: 'white',
-  textAlign: 'center',
-}, 'color');
+  textAlign: 'center'
+}, 'color')
 
 export const Button = ({ children, textColor, onPress, disabled, ...props }) => {
   return (<Touchable onPress={onPress} disabled={disabled}>
@@ -56,9 +56,9 @@ export const Button = ({ children, textColor, onPress, disabled, ...props }) => 
         ) : children}
     </ButtonBody>
   </Touchable>
-)};
+  )
+}
 
+Button.displayName = 'Button'
 
-Button.displayName = 'Button';
-
-export default Button;
+export default Button

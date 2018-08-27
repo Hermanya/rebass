@@ -1,14 +1,14 @@
 import sys from 'native-system-components'
-import { space, color, zIndex } from 'styled-system'
 import { Box } from 'native-grid-styled'
 
 export const side = ({ side }) => {
-  if (!['left', 'right', 'top', 'bottom'].includes(side)) return {
-    top: 0,
-    left: 0,
-    bottom: 0
+  if (!['left', 'right', 'top', 'bottom'].includes(side)) {
+    return {
+      top: 0,
+      left: 0,
+      bottom: 0
+    }
   }
-  const h = /^(left|right)$/.test(side) ? 1 : 0
   const top = /^(top|left|right)$/.test(side) ? 0 : null
   const bottom = /^(bottom|left|right)$/.test(side) ? 0 : null
   const left = /^(left|top|bottom)$/.test(side) ? 0 : null
@@ -18,7 +18,7 @@ export const side = ({ side }) => {
     top,
     bottom,
     left,
-    right,
+    right
   }
 }
 
@@ -31,7 +31,7 @@ export const transform = ({
     left: `translateX(-${width}px)`,
     right: `translateX(${width}px)`,
     top: `translateY(-${width}px)`,
-    bottom: `translateY(${width}px)`,
+    bottom: `translateY(${width}px)`
   }
   return ({
     transform: open ? null : transforms[side] || transforms.left
@@ -42,19 +42,18 @@ export const Drawer = sys({
   is: Box,
   blacklist: [
     'side',
-    'open',
+    'open'
   ],
   position: 'absolute',
-  // color: 'white',
   bg: 'black',
   open: false,
   side: 'bottom',
-  width: 320,
+  width: 320
 }, side,
 transform,
-  'zIndex',
-  'height',
-  {
+'zIndex',
+'height',
+{
   // transform: {translateX: -320}
 
   // overflowX: 'hidden',
@@ -62,7 +61,7 @@ transform,
   // transitionProperty: 'transform',
   // transitionDuration: '.2s',
   // transitionTimingFunction: 'ease-out'
-  }
+}
 )
 
 Drawer.displayName = 'Drawer'

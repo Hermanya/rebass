@@ -59,7 +59,7 @@ export {
   Relative,
   Absolute,
   Fixed,
-  Sticky,
+  Sticky
 } from './Position'
 
 export { Modal } from './Modal'

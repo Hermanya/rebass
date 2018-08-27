@@ -11,9 +11,9 @@ export const Pre = sys({
 // }, {
 //   overflow: 'auto'
 },
-  'fontFamily',
-  'space',
-  'color'
+'fontFamily',
+'space',
+'color'
 )
 
 Pre.displayName = 'Pre'

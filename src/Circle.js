@@ -7,8 +7,8 @@ export const Circle = sys({
   align: 'center',
   borderRadius: '99999px'
 },
-  'textAlign',
-  'size'
+'textAlign',
+'size'
 )
 
 Circle.displayName = 'Circle'

@@ -5,9 +5,9 @@ export const Code = sys({
   fontSize: 1,
   fontFamily: 'monospace'
 },
-  'fontFamily',
-  'space',
-  'color'
+'fontFamily',
+'space',
+'color'
 )
 
 Code.displayName = 'Code'

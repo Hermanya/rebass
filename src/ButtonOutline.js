@@ -4,7 +4,7 @@ import Button from './Button'
 
 export const ButtonOutline = sys({
   is: Button,
-  bg: 'transparent',
+  bg: 'transparent'
   // hover: {
   //   color: 'white',
   //   backgroundColor: 'blue',

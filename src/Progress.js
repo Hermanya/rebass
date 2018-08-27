@@ -1,5 +1,5 @@
 import sys from 'native-system-components'
-import { theme } from 'styled-system'
+// import { theme } from 'styled-system'
 
 export const Progress = sys({
   // is: 'progress',

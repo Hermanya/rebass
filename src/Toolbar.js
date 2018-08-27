@@ -9,7 +9,7 @@ export const Toolbar = sys({
   align: 'center',
   minHeight: '48px'
 }, 'minHeight', {
-  WebkitFontSmoothing: 'antialiased',
+  WebkitFontSmoothing: 'antialiased'
 })
 
 Toolbar.displayName = 'Toolbar'
