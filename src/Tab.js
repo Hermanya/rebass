@@ -31,7 +31,7 @@ export const Tab = sys({
     fontWeight: 'bold'
   }
 }, {
-  textDecoration: 'none'
+  // textDecoration: 'none'
 })
 
 Tab.displayName = 'Tab'

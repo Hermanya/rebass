@@ -1,7 +1,7 @@
 import React from 'react'
 import sys from 'native-system-components'
 import {Svg, Circle} from 'react-primitives-svg'
-import { theme } from 'styled-system'
+import { themeGet } from 'styled-system'
 
 const DonutBase = props => {
   const R = 16 - props.strokeWidth
@@ -17,7 +17,7 @@ const DonutBase = props => {
         cy={16}
         r={R}
         fill='none'
-        stroke={theme('colors.' + props.strokeColor)(props)}
+        stroke={themeGet('colors.' + props.strokeColor, props.strokeColor)(props)}
         strokeWidth={props.strokeWidth}
         opacity='0.125'
       />
@@ -26,7 +26,7 @@ const DonutBase = props => {
         cy={16}
         r={R}
         fill='none'
-        stroke={theme('colors.' + props.strokeColor)(props)}
+        stroke={themeGet('colors.' + props.strokeColor, props.strokeColor)(props)}
         strokeWidth={props.strokeWidth}
         strokeDasharray={C}
         strokeDashoffset={C - props.value * C}

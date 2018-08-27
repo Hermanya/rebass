@@ -18,6 +18,7 @@ BlockquoteHelper.displayName = 'BlockquoteHelper'
 
 export const Blockquote = sys({
   is: BlockquoteHelper,
+  pl: 1,
   borderLeftWidth: 2,
   borderStyle: 'solid',
   borderColor: 'blue',

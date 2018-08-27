@@ -83,8 +83,8 @@ export default class App extends React.Component {
             <Subhead>Buttons</Subhead>
             <Row justifyContent='space-around'>
               <Button children='Basic' onPress={this.alert} />
-              <ButtonOutline textColor='blue' children='Outline' onPress={this.alert} />
-              <ButtonTransparent textColor='blue' children='Transparent' onPress={this.alert} />
+              <ButtonOutline textProps={{color: 'blue'}} children='Outline' onPress={this.alert} />
+              <ButtonTransparent textProps={{color: 'blue'}} children='Transparent' onPress={this.alert} />
               <ButtonCircle children='Circle' onPress={this.alert} />
               {/* <Close onPress={this.alert}/> */}
             </Row>
@@ -162,8 +162,8 @@ export default class App extends React.Component {
             <Subhead>Group</Subhead>
             <Flex flexDirection='row'>
               <Button children='Beep' borderTopRightRadius={0} borderBottomRightRadius={0} />
-              <ButtonOutline textColor='blue' children='Boop' borderRadius={0} borderLeftWidth={0} borderRightWidth={0} />
-              <ButtonOutline textColor='blue' children='Bop' borderTopLeftRadius={0} borderBottomLeftRadius={0} />
+              <ButtonOutline textProps={{color: 'blue'}} children='Boop' borderRadius={0} borderLeftWidth={0} borderRightWidth={0} />
+              <ButtonOutline textProps={{color: 'blue'}} children='Bop' borderTopLeftRadius={0} borderBottomLeftRadius={0} />
             </Flex>
 
             <Subhead>Image</Subhead>

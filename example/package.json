@@ -13,7 +13,7 @@
     "expo": "^29.0.0",
     "react": "16.3.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-29.0.0.tar.gz",
-    "rebass-native": "git+https://github.com/hermanya/rebass-native.git",
+    "rebass-native": "github:hermanya/rebass-native",
     "styled-components": "^3.4.5"
   }
 }
