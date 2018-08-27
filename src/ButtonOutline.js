@@ -11,7 +11,7 @@ export const ButtonOutline = sys({
   // }
 }, props => ({
   borderWidth: 2,
-  borderColor: themeGet('colors.' + props.textColor, props.textColor)(props),
+  borderColor: themeGet('colors.' + props.textProps.color, props.textProps.color)(props),
   borderStyle: 'solid'
 }))
 

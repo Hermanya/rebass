@@ -121,10 +121,10 @@ export default class App extends React.Component {
             <Samp>Samp</Samp>
             <Lead>Lead</Lead>
             <Label>Label</Label>
-            <Measure maxWidth={256}>
-              Sunglasses in kensington taste of little italy should we TTC 905ers central tech sneaky dee's nachos zanta shopify blogTO garrison creek melting smell ride the rocket yonge and eg yonge and dundas square comfort zone roncy the 504 the 504 the annex ISO oliver's jewellery attention all passengers on line 1 first thursdays gerrard aquare kensington market 3 AM at the lakeview toronto public library sneaky dee's nachos hooker harveys jane and finch bellwoods can collectors taste of little italy the dufferin mall pedestrian sundays PATH timmie's 416 sugar and carlos riverdale park MMVAs crews beef patties don valley parking lot
-            </Measure>
             <Small>Small</Small>
+            <Measure>
+              Measure is a lengthy block of text, that needs to be bound to a certain width.
+            </Measure>
 
             <Subhead>Border</Subhead>
             <Border

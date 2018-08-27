@@ -3,7 +3,7 @@ import { Flex } from 'native-grid-styled'
 
 export const Banner = sys({
   is: Flex,
-  p: [ 3, 4 ],
+  p: 3,
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
