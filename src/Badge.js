@@ -1,35 +1,37 @@
 import React from 'react'
 import sys from 'native-system-components'
-import Text from './Text'
-export const BadgeBody = sys({
+import {Box, Text} from './'
+export class BadgeHelper extends React.Component {
+  render () {
+    const {children, textProps, ...props} = this.props
+    return (
+      <Box {...props}>
+        {typeof children === 'string' ? <Text
+          {...textProps}
+        >{children}</Text> : children}
+      </Box>
+    )
+  }
+}
+
+export const Badge = sys({
+  is: BadgeHelper,
   // fontSize: 0,
   px: 2,
   py: 1,
   mx: 1,
-  // color: 'white',
   bg: 'blue',
-  // fontWeight: 'bold',
-  borderRadius: 2
+  borderRadius: 2,
+  textProps: {
+    fontSize: 0,
+    fontWeight: 'bold',
+    color: 'white'
+  }
 }, {
   // WebkitFontSmoothing: 'antialiased',
   // display: 'inline-block',
   // verticalAlign: 'middle'
 })
-
-export class Badge extends React.Component {
-  render () {
-    const {children, ...props} = this.props
-    return (
-      <BadgeBody {...props}>
-        {typeof children === 'string' ? <Text
-          fontSize={0}
-          fontWeight='bold'
-          color='white'
-        >{children}</Text> : children}
-      </BadgeBody>
-    )
-  }
-}
 
 Badge.displayName = 'Badge'
 

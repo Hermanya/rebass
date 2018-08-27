@@ -5,13 +5,11 @@ import Text from './Text'
 
 class MessageHelper extends React.Component {
   render () {
-    const {children, ...props} = this.props
+    const {children, textProps, ...props} = this.props
     return (
       <Flex {...props}>
-        {typeof children === 'string' ? <Text
-          fontWeight={'bold'}
-          color={'white'}
-        >{children}</Text> : children}
+        {typeof children === 'string'
+          ? <Text {...textProps}>{children}</Text> : children}
       </Flex>
     )
   }
@@ -24,7 +22,11 @@ export const Message = sys({
   bg: 'blue',
   flexDirection: 'row',
   alignItems: 'center',
-  minHeight: '48px'
+  minHeight: '48px',
+  textProps: {
+    fontWeight: 'bold',
+    color: 'white'
+  }
 }, 'minHeight', {
   // WebkitFontSmoothing: 'antialiased',
 })
