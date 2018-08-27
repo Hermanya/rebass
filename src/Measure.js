@@ -3,7 +3,7 @@ import sys from 'native-system-components'
 import {Box, Text} from './'
 
 const MeasureHelper = ({children}) => <Box>
-  {typeof children === 'text' ? <Text>{children}</Text> : children}
+  {typeof children === 'string' ? <Text>{children}</Text> : children}
 </Box>
 
 export const Measure = sys({

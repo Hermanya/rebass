@@ -12,8 +12,8 @@ export const Panel = sys({
 Panel.displayName = 'Panel'
 
 Panel.Header = sys({
-  is: 'header',
-  fontSize: 2,
+  // is: 'header',
+  // fontSize: 2,
   p: 2,
   bg: 'white',
   borderBottom: 1,
@@ -23,8 +23,8 @@ Panel.Header = sys({
 Panel.Header.displayName = 'Panel.Header'
 
 Panel.Footer = sys({
-  is: 'footer',
-  fontSize: 1,
+  // is: 'footer',
+  // fontSize: 1,
   p: 2,
   bg: 'white',
   borderTop: 1,

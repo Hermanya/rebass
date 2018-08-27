@@ -12,13 +12,6 @@ export const Position = sys(
 
 Position.displayName = 'Position'
 
-export const Relative = sys({
-  is: Position
-}, {
-  position: 'relative'
-})
-Relative.displayName = 'Relative'
-
 export const Absolute = sys({
   is: Position
 }, {
@@ -26,18 +19,5 @@ export const Absolute = sys({
 })
 Absolute.displayName = 'Absolute'
 
-export const Fixed = sys({
-  is: Position
-}, {
-  position: 'fixed'
-})
-Fixed.displayName = 'Fixed'
-
-export const Sticky = sys({
-  is: Position
-}, {
-  position: 'sticky'
-})
-Sticky.displayName = 'Sticky'
 
 export default Position

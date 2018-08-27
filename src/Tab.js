@@ -7,7 +7,8 @@ export const Tab = sys({
   mr: 3,
   py: 2,
   color: 'inherit',
-  borderBottom: 2,
+  borderBottomWidth: 2,
+  borderStyle: 'solid',
   borderColor: 'transparent',
   hover: {
     color: 'blue'

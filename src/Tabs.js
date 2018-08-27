@@ -3,7 +3,8 @@ import { Flex } from 'native-grid-styled'
 
 export const Tabs = sys({
   is: Flex,
-  borderBottom: 1,
+  borderBottomWidth: 1,
+  borderStyle: 'solid',
   borderColor: 'gray'
 })
 

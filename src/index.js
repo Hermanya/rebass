@@ -11,7 +11,6 @@ export { ButtonOutline } from './ButtonOutline'
 export { ButtonCircle } from './ButtonCircle'
 export { ButtonTransparent } from './ButtonTransparent'
 
-export { NavLink } from './NavLink'
 export { Close } from './Close'
 
 export { Text } from './Text'

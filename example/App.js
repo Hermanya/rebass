@@ -10,10 +10,24 @@ import {
     Divider, Donut, Dot, Drawer,
     Image,
 
-    Lead, Label, Measure, Message,
+    Lead, Label, Measure, Message, Modal,
 
-    Pre, Samp
+    Pre, Samp, Small,
+
+    Tabs, Tab,
+
+    Provider
   } from 'rebass-native';
+
+const theme = {
+  colors: {
+    blue: '#6785d0',
+    violet: '#b75fb3',
+    yellow: '#b88f3e',
+    red: '#cb5658',
+    green: '#64a85c'
+  }
+}
 
 export default class App extends React.Component {
 
@@ -35,9 +49,9 @@ export default class App extends React.Component {
       return <View><Text>Loading!</Text></View>
     }
     return (
-      <Box pt={5}>
+      <Provider theme={theme}>
         <ScrollView>
-          <Container>
+          <Container pt={5}>
           <Heading>Components</Heading>
           {/* <Switch value={this.state.switchOn} onValueChange={() => this.setState({
             switchOn: !this.state.switchOn
@@ -89,7 +103,7 @@ export default class App extends React.Component {
             <Flex flexDirection="row" alignItems="center">
             <Subhead>Badges</Subhead>
             <Badge>Beep</Badge>
-            <Circle>🤖</Circle>
+            <Circle>B</Circle>
             </Flex>
 
             <Subhead>Typography</Subhead>
@@ -98,11 +112,12 @@ export default class App extends React.Component {
             </Blockquote>
             <Caps>Caps</Caps>
             <Code>Code</Code>
-            <Pre>Code</Pre>
+            <Pre>Pre</Pre>
             <Samp>Samp</Samp>
             <Lead>Lead</Lead>
             <Label>Label</Label>
-            <Measure>Measure Measure Measure Measure Measure Measure</Measure>
+            {/* <Measure>Measure Measure Measure Measure Measure Measure</Measure> */}
+            <Small>Small</Small>
 
             <Subhead>Border</Subhead>
             <Border
@@ -160,6 +175,22 @@ export default class App extends React.Component {
           <Subhead>Message</Subhead>
             <Message>Hello there</Message>
 
+          <Subhead>Modal</Subhead>
+          <Button onPress={() => this.setState({modalOpen: true})}>Open Modal</Button>
+
+
+            <Tabs>
+  <Tab borderColor='blue'>
+    <Text>Beep</Text>
+  </Tab>
+  <Tab>
+    <Text>Boop</Text>
+  </Tab>
+  <Tab>
+    <Text>Bop</Text>
+  </Tab>
+</Tabs>
+
             </Container>
         </ScrollView>
         <Drawer
@@ -167,10 +198,15 @@ export default class App extends React.Component {
             side='left'
             p={3}
             bg='white'>
-            <Heading>Hello</Heading>
+            <Heading>Hello from drawer!</Heading>
             <Button onPress={() => this.setState({drawerOpen: false})}>Close Drawer</Button>
           </Drawer>
-      </Box>
+
+        {this.state.modalOpen && <Modal width={256}>
+          <Heading>Hello from modal!</Heading>
+          <Button onPress={() => this.setState({modalOpen: false})}>Close Modal</Button>
+        </Modal>}
+      </Provider>
     );
   }
 }
