@@ -2,9 +2,11 @@ import React from 'react'
 import sys from 'native-system-components'
 import {Box, Text} from './'
 
-const MeasureHelper = ({children}) => <Box>
-  {typeof children === 'string' ? <Text>{children}</Text> : children}
-</Box>
+const MeasureHelper = ({children, textProps = {}, ...props}) =>
+  <Box {...props}>
+    {typeof children === 'string'
+      ? <Text {...textProps}>{children}</Text> : children}
+  </Box>
 
 export const Measure = sys({
   is: MeasureHelper,
