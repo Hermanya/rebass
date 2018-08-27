@@ -2,9 +2,9 @@ import React from 'react'
 import sys from 'native-system-components'
 import { themeGet } from 'styled-system'
 import { Touchable } from 'react-primitives'
-import {Text, Box} from './Text'
+import {Text, Box} from './'
 
-class ButtomHelper extends React.Component {
+class ButtonHelper extends React.Component {
   render () {
     const { children, textProps, onPress, disabled, ...props } = this.props
     return (
@@ -21,7 +21,7 @@ class ButtomHelper extends React.Component {
 }
 
 export const Button = sys({
-  is: ButtomHelper,
+  is: ButtonHelper,
   m: 0,
   px: 3,
   py: 2,
