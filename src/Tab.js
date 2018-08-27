@@ -3,16 +3,21 @@ import sys from 'native-system-components'
 import {Touchable} from 'react-primitives'
 import {Text, Box} from './'
 
-const TabHelper = ({children, touchableProps = {}, ...props}) =>
-  <Box {...props}>
-    <Touchable {...touchableProps}>
-      {typeof children === 'string' ? <Text>{children}</Text> : children}
-    </Touchable>
-  </Box>
+class TabHelper extends React.Component {
+  render () {
+    const {children, touchableProps = {}, ...props} = this.props
+    return (
+      <Box {...props}>
+        <Touchable {...touchableProps}>
+          {typeof children === 'string' ? <Text>{children}</Text> : children}
+        </Touchable>
+      </Box>
+    )
+  }
+}
 
 export const Tab = sys({
   is: TabHelper,
-  fontSize: 1,
   fontWeight: 'bold',
   mr: 3,
   py: 2,

@@ -10,7 +10,7 @@ const MeasureHelper = ({children, textProps = {}, ...props}) =>
 
 export const Measure = sys({
   is: MeasureHelper,
-  maxWidth: '32em'
+  maxWidth: 256
 }, 'maxWidth')
 
 Measure.displayName = 'Measure'
