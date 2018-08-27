@@ -4,6 +4,7 @@ import { Font } from 'expo'
 import {
   Container, Heading, Subhead, Box, Flex, Row, Column, Text,
   Arrow, Avatar,
+  Banner,
   Button, ButtonTransparent, ButtonOutline, ButtonCircle,
   Badge, Blockquote, Border,
   Caps, Card, Circle, Code, Close,
@@ -73,11 +74,16 @@ export default class App extends React.Component {
               <Text color='white'>Box</Text>
             </Box>
 
+            <Subhead>Banner</Subhead>
+            <Banner>
+              <Text color='white'>Banner</Text>
+            </Banner>
+
             <Subhead>Rows & Columns</Subhead>
             <Row>
-              <Column><Text>Column</Text></Column>
-              <Column><Text>Column</Text></Column>
-              <Column><Text>Column</Text></Column>
+              <Column bg='red'><Text>Column</Text></Column>
+              <Column bg='green'><Text>Column</Text></Column>
+              <Column bg='blue'><Text>Column</Text></Column>
             </Row>
 
             <Subhead>Buttons</Subhead>
@@ -86,7 +92,7 @@ export default class App extends React.Component {
               <ButtonOutline textProps={{color: 'blue'}} children='Outline' onPress={this.alert} />
               <ButtonTransparent textProps={{color: 'blue'}} children='Transparent' onPress={this.alert} />
               <ButtonCircle children='Circle' onPress={this.alert} />
-              {/* <Close onPress={this.alert}/> */}
+              <Close textProps={{color: 'blue'}} onPress={this.alert} />
             </Row>
 
             <Subhead>Arrows</Subhead>

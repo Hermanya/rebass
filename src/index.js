@@ -3,7 +3,6 @@ export { Flex, Box } from 'native-grid-styled'
 export { default as theme } from './theme'
 export { colors, createColors } from './colors'
 
-export { Base } from './Base'
 export { Provider } from './Provider'
 
 export { Button } from './Button'
@@ -22,13 +21,14 @@ export { Lead } from './Lead'
 export { Truncate } from './Truncate'
 
 export { Blockquote } from './Blockquote'
-export { Divider } from './Divider'
 export { Pre } from './Pre'
 export { Code } from './Code'
 export { Samp } from './Samp'
 export { Measure } from './Measure'
-
 export { Label } from './Label'
+
+export { Divider } from './Divider'
+export { Border } from './Border'
 
 export { Image } from './Image'
 export { Avatar } from './Avatar'
@@ -37,14 +37,12 @@ export { Container } from './Container'
 export { Row } from './Row'
 export { Column } from './Column'
 
-export { Border } from './Border'
 export { Card } from './Card'
 export { Panel } from './Panel'
 export { Progress } from './Progress'
 
 export { Banner } from './Banner'
 export { Message } from './Message'
-export { Toolbar } from './Toolbar'
 export { Tabs } from './Tabs'
 export { Tab } from './Tab'
 
@@ -56,10 +54,7 @@ export { Donut } from './Donut'
 
 export {
   Position,
-  Relative,
-  Absolute,
-  Fixed,
-  Sticky
+  Absolute
 } from './Position'
 
 export { Modal } from './Modal'
