@@ -15,7 +15,7 @@ import {
 
   Pre, Samp, Small,
 
-  Tabs, Tab,
+  Tabs, Tab, Truncate,
 
   Provider
 } from 'rebass-native'
@@ -95,11 +95,11 @@ export default class App extends React.Component {
               <Close textProps={{color: 'blue'}} onPress={this.alert} />
             </Row>
 
-            <Subhead>Arrows</Subhead>
-            <Row justifyContent='space-around'>
+            <Flex flexDirection='row' alignItems='center'>
+              <Subhead>Arrows</Subhead>
               <Arrow direction='down' />
               <Arrow direction='up' />
-            </Row>
+            </Flex>
 
             <Subhead>Avatar</Subhead>
             <Avatar size={64} source={{uri: 'https://media.licdn.com/dms/image/C4D03AQHrQu7jWlkkmQ/profile-displayphoto-shrink_200_200/0?e=1537401600&v=beta&t=ws9VPq6stGc_d_hWJnDedhd-DZWllePa3RQHUacWQJU'
@@ -115,16 +115,19 @@ export default class App extends React.Component {
             <Blockquote>
               “Block quote”
             </Blockquote>
-            <Caps>Caps</Caps>
-            <Code>Code</Code>
-            <Pre>Pre</Pre>
-            <Samp>Samp</Samp>
-            <Lead>Lead</Lead>
-            <Label>Label</Label>
-            <Small>Small</Small>
+            <Caps>Caps makes letters uppercase</Caps>
+            <Code>Code is for programming code</Code>
+            <Pre>Pre is for monospaced formatted text</Pre>
+            <Samp>Samp is used to display command output</Samp>
+            <Lead>Lead makes text stand out</Lead>
+            <Label>Label are for input controls</Label>
             <Measure>
               Measure is a lengthy block of text, that needs to be bound to a certain width.
             </Measure>
+            <Small>Small text can be used for help</Small>
+            <Truncate>
+              Truncate is for lengthy text, that needs to be on one line and is not that important.
+            </Truncate>
 
             <Subhead>Border</Subhead>
             <Border

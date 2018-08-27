@@ -6,6 +6,7 @@ import { themeGet } from 'styled-system'
 const DonutBase = props => {
   const R = 16 - props.strokeWidth
   const C = 2 * Math.PI * R
+  const color = themeGet('colors.' + props.strokeColor, props.strokeColor)(props)
   return (
     <Svg
       {...props}
@@ -17,7 +18,7 @@ const DonutBase = props => {
         cy={16}
         r={R}
         fill='none'
-        stroke={themeGet('colors.' + props.strokeColor, props.strokeColor)(props)}
+        stroke={color}
         strokeWidth={props.strokeWidth}
         opacity='0.125'
       />
@@ -26,7 +27,7 @@ const DonutBase = props => {
         cy={16}
         r={R}
         fill='none'
-        stroke={themeGet('colors.' + props.strokeColor, props.strokeColor)(props)}
+        stroke={color}
         strokeWidth={props.strokeWidth}
         strokeDasharray={C}
         strokeDashoffset={C - props.value * C}
@@ -41,6 +42,9 @@ export const Donut = sys({
   strokeColor: 'blue',
   strokeWidth: 2,
   value: 1
+}, (props) => {
+  // see if this adds theme prop
+  return {}
 }, 'space', 'color')
 
 Donut.displayName = 'Donut'
