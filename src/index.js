@@ -66,6 +66,5 @@ export {
 
 export { Modal } from './Modal'
 export { Drawer } from './Drawer'
-export { Carousel } from './Carousel'
 
 export { Hide } from './Hide'
