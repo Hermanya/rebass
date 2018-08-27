@@ -20,7 +20,7 @@ class ButtomHelper extends React.Component {
   }
 }
 
-const Button = sys({
+export const Button = sys({
   is: ButtomHelper,
   m: 0,
   px: 3,

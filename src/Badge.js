@@ -1,7 +1,7 @@
 import React from 'react'
 import sys from 'native-system-components'
 import {Box, Text} from './'
-export class BadgeHelper extends React.Component {
+class BadgeHelper extends React.Component {
   render () {
     const {children, textProps, ...props} = this.props
     return (
