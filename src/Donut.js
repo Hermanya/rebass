@@ -2,24 +2,24 @@ import React from 'react'
 import sys from 'native-system-components'
 import {Svg, Circle} from 'react-primitives-svg'
 import { themeGet } from 'styled-system'
-
+import {Box} from './'
 const DonutBase = props => {
-  const R = 16 - props.strokeWidth
+  const {size, strokeWidth, strokeColor, value, ...boxProps} = props
+  const R = 16 - strokeWidth
   const C = 2 * Math.PI * R
-  const color = themeGet('colors.' + props.strokeColor, props.strokeColor)(props)
-  return (
+  const color = themeGet('colors.' + strokeColor, strokeColor)(props)
+  return (<Box {...boxProps}>
     <Svg
-      {...props}
       viewBox='0 0 32 32'
-      width={props.size || 128}
-      height={props.size || 128}>
+      width={size || 128}
+      height={size || 128}>
       <Circle
         cx={16}
         cy={16}
         r={R}
         fill='none'
         stroke={color}
-        strokeWidth={props.strokeWidth}
+        strokeWidth={strokeWidth}
         opacity='0.125'
       />
       <Circle
@@ -28,12 +28,13 @@ const DonutBase = props => {
         r={R}
         fill='none'
         stroke={color}
-        strokeWidth={props.strokeWidth}
+        strokeWidth={strokeWidth}
         strokeDasharray={C}
-        strokeDashoffset={C - props.value * C}
+        strokeDashoffset={C - value * C}
         transform='rotate(-90 16 16)'
       />
     </Svg>
+  </Box>
   )
 }
 
@@ -42,10 +43,7 @@ export const Donut = sys({
   strokeColor: 'blue',
   strokeWidth: 2,
   value: 1
-}, (props) => {
-  // see if this adds theme prop
-  return {}
-}, 'space', 'color')
+})
 
 Donut.displayName = 'Donut'
 

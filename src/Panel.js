@@ -16,7 +16,7 @@ Panel.Header = sys({
   // fontSize: 2,
   p: 2,
   bg: 'white',
-  borderBottom: 1,
+  borderBottomWidth: 1,
   borderColor: 'gray'
 })
 
@@ -27,7 +27,7 @@ Panel.Footer = sys({
   // fontSize: 1,
   p: 2,
   bg: 'white',
-  borderTop: 1,
+  borderTopWidth: 1,
   borderColor: 'gray'
 })
 
