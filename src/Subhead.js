@@ -2,14 +2,14 @@ import React from 'react'
 import sys from 'native-system-components'
 import Heading from './Heading'
 import {Text} from 'react-primitives'
-const Base = props =>
+const SubheadHelper = props =>
   <Heading
     is={Text}
     {...props}
   />
 
 export const Subhead = sys({
-  is: Base,
+  is: SubheadHelper,
   fontSize: 4
 })
 

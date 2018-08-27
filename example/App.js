@@ -10,7 +10,9 @@ import {
     Divider, Donut, Dot, Drawer,
     Image,
 
-    Lead, Label, Measure, Message
+    Lead, Label, Measure, Message,
+
+    Pre, Samp
   } from 'rebass-native';
 
 export default class App extends React.Component {

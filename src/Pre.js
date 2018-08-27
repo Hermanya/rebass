@@ -6,7 +6,7 @@ export const Pre = sys({
     web: 'pre'
   }[Platform.OS] || Code,
   fontSize: 1,
-  fontFamily: 'mono',
+  fontFamily: 'monospace',
   m: 0
 // }, {
 //   overflow: 'auto'

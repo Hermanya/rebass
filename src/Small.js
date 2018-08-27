@@ -2,11 +2,11 @@ import React from 'react'
 import sys from 'native-system-components'
 import Text from './Text'
 
-const Base = props =>
+const SmallHelper = props =>
   <Text {...props} is='small' />
 
 export const Small = sys({
-  is: Base,
+  is: SmallHelper,
   fontSize: 0
 })
 

@@ -4,7 +4,6 @@ export { default as theme } from './theme'
 export { colors, createColors } from './colors'
 
 export { Base } from './Base'
-export { Root } from './Root'
 export { Provider } from './Provider'
 
 export { Button } from './Button'

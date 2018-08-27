@@ -2,7 +2,7 @@ import React from 'react'
 import sys from 'native-system-components'
 import Code from './Code'
 import {Platform} from 'react-primitives'
-const Base = props =>
+const SampHelper = props =>
   <Code
     is={{
       web: 'samp'
@@ -11,7 +11,7 @@ const Base = props =>
   />
 
 export const Samp = sys({
-  is: Base
+  is: SampHelper
 })
 
 Samp.displayName = 'Samp'
