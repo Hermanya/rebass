@@ -3,7 +3,7 @@ import {Text} from 'react-primitives'
 export const Code = sys({
   is: Text,
   fontSize: 1,
-  fontFamily: 'space-mono'
+  fontFamily: 'monospace'
 },
   'fontFamily',
   'space',

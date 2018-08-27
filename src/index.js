@@ -14,7 +14,6 @@ export { ButtonTransparent } from './ButtonTransparent'
 
 export { Link } from './Link'
 export { NavLink } from './NavLink'
-export { BlockLink } from './BlockLink'
 export { Close } from './Close'
 
 export { Text } from './Text'
@@ -37,7 +36,6 @@ export { Input } from './Input'
 export { Select } from './Select'
 export { Textarea } from './Textarea'
 export { Radio } from './Radio'
-export { Checkbox } from './Checkbox'
 export { Slider } from './Slider'
 export { Switch } from './Switch'
 
@@ -79,7 +77,6 @@ export {
 export { Modal } from './Modal'
 export { Drawer } from './Drawer'
 export { Carousel } from './Carousel'
-export { Tooltip } from './Tooltip'
 
 export { Hide } from './Hide'
 

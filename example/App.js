@@ -1,11 +1,6 @@
 import React from 'react';
-import {
-  Alert,
-  ScrollView,
-  View,
-  Dimensions
-} from 'react-native';
-import { WebBrowser } from 'expo';
+import { ScrollView, View, Dimensions } from 'react-native';
+import { Font } from 'expo'
 import {
   Container, Heading, Subhead, Box, Flex,  Row, Column, Text,
   Arrow, Avatar,
@@ -15,25 +10,36 @@ import {
     Divider, Donut, Dot, Drawer,
     Image,
 
-    Switch
+    Lead, Label, Measure, Message
   } from 'rebass-native';
 
-export default class HomeScreen extends React.Component {
-  static navigationOptions = {
-    header: null,
-  };
+export default class App extends React.Component {
 
-  state = {}
-
+  constructor (props) {
+    super(props)
+    this.state = {
+      loading: true
+    }
+    this.loadFonts()
+    .then(() => this.setState({loading: false}))
+  }
+  loadFonts () {
+    return Font.loadAsync({
+      'space-mono': require('./assets/fonts/SpaceMono-Regular.ttf'),
+    })
+  }
   render() {
+    if (this.state.loading) {
+      return <View><Text>Loading!</Text></View>
+    }
     return (
-      <View>
+      <Box pt={5}>
         <ScrollView>
           <Container>
           <Heading>Components</Heading>
-          <Switch value={this.state.switchOn} onValueChange={() => this.setState({
+          {/* <Switch value={this.state.switchOn} onValueChange={() => this.setState({
             switchOn: !this.state.switchOn
-          })} m={5} color="blue"/>
+          })} m={5} color="blue"/> */}
           <Subhead>Flex</Subhead>
           <Flex flexDirection="row">
             <Box width={[ 1/2 ]} p={3} bg='blue'>
@@ -90,6 +96,10 @@ export default class HomeScreen extends React.Component {
             </Blockquote>
             <Caps>Caps</Caps>
             <Code>Code</Code>
+            <Lead>Lead</Lead>
+            <Label>Label</Label>
+            <Measure>Measure Measure Measure Measure Measure Measure</Measure>
+
             <Subhead>Border</Subhead>
             <Border
               py={2}>
@@ -107,12 +117,6 @@ export default class HomeScreen extends React.Component {
                 Hello
               </Subhead>
            </Card>
-
-
-          <Subhead>Checkbox</Subhead>
-          <Checkbox value={this.state.checkboxValue} onChange={() => this.setState({
-            checkboxValue: !this.state.checkboxValue
-          })}/>
 
           <Subhead>Divider</Subhead>
           <Divider/>
@@ -149,6 +153,9 @@ export default class HomeScreen extends React.Component {
             aspectRatio={2}
             source={{uri: 'https://source.unsplash.com/random'}}/>
 
+          <Subhead>Message</Subhead>
+            <Message>Hello there</Message>
+
             </Container>
         </ScrollView>
         <Drawer
@@ -159,51 +166,7 @@ export default class HomeScreen extends React.Component {
             <Heading>Hello</Heading>
             <Button onPress={() => this.setState({drawerOpen: false})}>Close Drawer</Button>
           </Drawer>
-      </View>
+      </Box>
     );
   }
-
-  alert=() => {
-    Alert.alert(
-      'It works',
-      '',
-      [
-        {text: 'OK', onPress: () => console.log('OK Pressed')},
-      ],
-      { cancelable: false }
-    )
-  }
-  _maybeRenderDevelopmentModeWarning() {
-    if (__DEV__) {
-      const learnMoreButton = (
-        <Text onPress={this._handleLearnMorePress} style={styles.helpLinkText}>
-          Learn more
-        </Text>
-      );
-
-      return (
-        <Text style={styles.developmentModeText}>
-          Development mode is enabled, your app will be slower but you can use useful development
-          tools. {learnMoreButton}
-        </Text>
-      );
-    } else {
-      return (
-        <Text style={styles.developmentModeText}>
-          You are not in development mode, your app will run at full speed.
-        </Text>
-      );
-    }
-  }
-
-  _handleLearnMorePress = () => {
-    WebBrowser.openBrowserAsync('https://docs.expo.io/versions/latest/guides/development-mode');
-  };
-
-  _handleHelpPress = () => {
-    WebBrowser.openBrowserAsync(
-      'https://docs.expo.io/versions/latest/guides/up-and-running.html#can-t-see-your-changes'
-    );
-  };
 }
-

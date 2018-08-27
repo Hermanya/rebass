@@ -7,7 +7,9 @@
   "scripts": {
     "prepare": "babel src -d dist",
     "size": "bundlesize",
-    "start": "echo 'cd expo-example; yarn start'"
+    "generate-docs": "./docs/_build.js",
+    "serve-docs": "x0 docs",
+    "start": "cd expo-example; exp start; cd .."
   },
   "keywords": [
     "components",
