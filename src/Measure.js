@@ -1,3 +1,4 @@
+import React from 'react'
 import sys from 'native-system-components'
 import {Box, Text} from './'
 
