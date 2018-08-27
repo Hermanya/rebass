@@ -92,10 +92,12 @@ export default class App extends React.Component {
 
             <Subhead>Typography</Subhead>
             <Blockquote>
-            “Block quote”
+              “Block quote”
             </Blockquote>
             <Caps>Caps</Caps>
             <Code>Code</Code>
+            <Pre>Code</Pre>
+            <Samp>Samp</Samp>
             <Lead>Lead</Lead>
             <Label>Label</Label>
             <Measure>Measure Measure Measure Measure Measure Measure</Measure>

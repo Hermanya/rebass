@@ -36,7 +36,6 @@ export { Image } from './Image'
 export { Avatar } from './Avatar'
 
 export { Container } from './Container'
-export { Group } from './Group'
 export { Row } from './Row'
 export { Column } from './Column'
 
