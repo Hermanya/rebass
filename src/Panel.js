@@ -1,6 +1,7 @@
 import sys from 'native-system-components'
-
+import {Box} from './'
 export const Panel = sys({
+  is: Box,
   bg: 'white',
   borderRadius: 2,
   border: 1,
@@ -12,7 +13,7 @@ export const Panel = sys({
 Panel.displayName = 'Panel'
 
 Panel.Header = sys({
-  // is: 'header',
+  is: Box,
   // fontSize: 2,
   p: 2,
   bg: 'white',
@@ -23,7 +24,7 @@ Panel.Header = sys({
 Panel.Header.displayName = 'Panel.Header'
 
 Panel.Footer = sys({
-  // is: 'footer',
+  is: Box,
   // fontSize: 1,
   p: 2,
   bg: 'white',

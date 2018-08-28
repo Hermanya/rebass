@@ -10,6 +10,7 @@
     "workaround": "babel node_modules/react-native-web/dist/ -d node_modules/react-native-web/dist/",
     "generate-examples": "rm docs/components/*; rm examples/app/screens/*; npm run prepare; node generate-examples.js;",
     "docs": "x0 docs",
+    "deploy": "x0 build docs -d site; gh-pages -d site",
     "start": "cd examples/app; exp start; cd ../.."
   },
   "keywords": [
@@ -55,6 +56,7 @@
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-promise": "^4.0.0",
     "eslint-plugin-standard": "^3.1.0",
+    "gh-pages": "^1.2.0",
     "jest": "^23.1.0",
     "jest-styled-components": "^5.0.1",
     "lodash.sortby": "^4.7.0",
