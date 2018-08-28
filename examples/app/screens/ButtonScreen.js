@@ -1,12 +1,12 @@
 
-import React from 'react';
-import RebassNative from 'rebass-native'
+import React from 'react'
+import * as RebassNative from 'rebass-native'
 
 export const ButtonScreen = () => <RebassNative.Box>
   <RebassNative.Heading>Button</RebassNative.Heading>
   <RebassNative.Button
-  children='Hello'
-/>
+    children='Hello'
+  />
 
   <RebassNative.Code>{`<Button
   children='Hello'
@@ -39,4 +39,3 @@ borderBottom |  | borders | responsive
 borderLeft |  | borders | responsive
 justifyContent | center | N/A | responsive`}</RebassNative.Pre>
 </RebassNative.Box>
-    

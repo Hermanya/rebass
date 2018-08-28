@@ -7,7 +7,7 @@ export const Divider = sys({
   borderTopWidth: 0,
   borderLeftWidth: 0,
   borderRightWidth: 0,
-  borderBottomWidth: '1px',
+  borderBottomWidth: 2,
   borderStyle: 'solid',
   borderColor: 'gray'
 }, 'space', 'color')

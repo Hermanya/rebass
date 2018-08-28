@@ -8,19 +8,19 @@ import {
   Button, ButtonTransparent, ButtonOutline, ButtonCircle,
   Badge, Blockquote, Border,
   Caps, Card, Circle, Code, Close,
-  Divider, Donut, Dot, Drawer,
+  Divider, Dot, Drawer,
   Image,
 
   Lead, Label, Measure, Message, Modal,
 
-  Pre, Samp, Small,
+  Pre, Small,
 
   Tabs, Tab, Truncate,
 
   Provider
 } from 'rebass-native'
 
-import {ButtonScreen} from './screens/ButtonScreen.js'
+// import {ButtonScreen} from './screens/ButtonScreen.js'
 
 const theme = {
   colors: {
@@ -53,12 +53,10 @@ export default class App extends React.Component {
     return (
       <Provider theme={theme}>
         <ScrollView>
-          <ButtonScreen />
+          {/* <ButtonScreen /> */}
           <Container pt={5}>
             <Heading>Components</Heading>
-            {/* <Switch value={this.state.switchOn} onValueChange={() => this.setState({
-            switchOn: !this.state.switchOn
-          })} m={5} color="blue"/> */}
+
             <Subhead>Flex</Subhead>
             <Flex flexDirection='row'>
               <Box width={[ 1 / 2 ]} p={3} bg='blue'>
@@ -121,7 +119,6 @@ export default class App extends React.Component {
             <Caps>Caps makes letters uppercase</Caps>
             <Code>Code is for programming code</Code>
             <Pre>Pre is for monospaced formatted text</Pre>
-            <Samp>Samp is used to display command output</Samp>
             <Lead>Lead makes text stand out</Lead>
             <Label>Label are for input controls</Label>
             <Measure>
@@ -152,14 +149,6 @@ export default class App extends React.Component {
 
             <Subhead>Divider</Subhead>
             <Divider />
-
-            <Subhead>Donut</Subhead>
-            <Donut
-              value={2 / 3}
-              strokeWidth={3}
-              size={256}
-              strokeColor='blue'
-            />
 
             <Subhead>Dot</Subhead>
             <Flex flexDirection='row'>

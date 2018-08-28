@@ -1,6 +1,5 @@
 import React from 'react'
 import sys from 'native-system-components'
-import {Platform} from 'react-primitives'
 import {Box as SystemBox} from 'native-grid-styled'
 import {Text} from './'
 class BoxHelper extends React.Component {
@@ -20,7 +19,7 @@ BoxHelper.displayName = 'Box'
 export const Box = sys({
   is: BoxHelper,
   textProps: {}
-}, Platform.OS === 'web' ? {} : {})
+})
 
 Box.displayName = 'Box'
 
