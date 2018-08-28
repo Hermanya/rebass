@@ -1,5 +1,5 @@
 import sys from 'native-system-components'
-import { Box } from 'native-grid-styled'
+import { Box } from './'
 
 export const Column = sys({
   is: Box,

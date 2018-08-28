@@ -4,6 +4,13 @@ import { themeGet } from 'styled-system'
 import { Touchable, Platform } from 'react-primitives'
 import {Text, Box} from './'
 
+const defaultTextProps = {
+  fontSize: 1,
+  fontWeight: 'bold',
+  color: 'white',
+  textAlign: 'center'
+}
+
 class ButtonHelper extends React.Component {
   render () {
     const { children, textProps, onPress, disabled, ...props } = this.props
@@ -12,7 +19,7 @@ class ButtonHelper extends React.Component {
         <Touchable onPress={disabled ? undefined : onPress}>
           {typeof children === 'string'
             ? (
-              <Text {...textProps}> {children}</Text>
+              <Text {...defaultTextProps} {...textProps}> {children}</Text>
             ) : children}
         </Touchable>
       </Box>
@@ -31,12 +38,7 @@ export const Button = sys({
   borderRadius: 2,
   border: 0,
   justifyContent: 'center',
-  textProps: {
-    fontSize: 1,
-    fontWeight: 'bold',
-    color: 'white',
-    textAlign: 'center'
-  }
+  textProps: {}
 },
 props => ({
   opacity: props.disabled ? 1 / 4 : 1,

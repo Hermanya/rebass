@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'refunk'
 import styled from 'styled-components'
 import { Link as RouterLink } from 'react-router-dom'
+
 import {
   Flex,
   Box,
@@ -15,8 +16,6 @@ import {
   BlockLink,
   Image,
   Blockquote,
-} from '../src'
-import {
     NavLink,
     Measure,
     Link
@@ -47,48 +46,29 @@ const Title = styled(Heading)([])
 const Hero = connect(props => (
   <Banner
     py={[ 4, 5 ]}
-    style={{
-      WebkitFontSmoothing: 'antialiased'
-    }}
     color='white'
     bg='black'>
     <Flex
-      flexWrap={[ 'wrap', 'wrap', 'nowrap' ]}
-      width={1}
-      mx={-3}
-      mb={3}
-      alignItems='flex-start'>
-      <Flex
-        justifyContent='center'
-        width={[ 1, null, 256, 320, 512 ]}
-        px={0}>
-      </Flex>
-      <Box width={[ 1, null, 384 ]} px={3}>
+      flexDirection='column'
+      alignItems='center'>
         <Title
           is='h1'
           fontSize={[ 6, 7, 8 ]}>
-          Rebass
+          Rebass Native
         </Title>
         {/* <Pre mb={2} color=''>v{props.pkg.version}</Pre> */}
         <Lead mb={3} fontWeight='bold' color=''>
           {/* {props.pkg.description} */}
         </Lead>
         <Flex
-          mx={-3}
           mb={4}
-          width={1}
-          flexWrap='wrap'
           alignItems='center'>
           <PrimaryButton
             is={RouterLink}
             to={docs}
             fontSize={2}
-            color='black'
-            bg='cyan'
-            children='Documentation'
-            py={3}
-            mx={3}
-            my={3}
+            children='Docs'
+            mr={3}
           />
           <SecondaryButton
             is='a'
@@ -96,16 +76,12 @@ const Hero = connect(props => (
             fontSize={2}
             color='white'
             children='GitHub'
-            py={3}
-            mx={3}
-            my={3}
+            mr={3}
           />
-          <Pre color='magenta' mx={3} my={3}>{install}</Pre>
+          <Pre color='magenta'>{install}</Pre>
         </Flex>
         <Flex
-          mt={3}
-          alignItems='center'
-          width={1}>
+          alignItems='center'>
           <BlockLink
             mr={2}
             py={2}
@@ -123,9 +99,7 @@ const Hero = connect(props => (
               src='https://img.shields.io/github/stars/hermanya/rebass-native.svg?style=social&label=Star'
             />
           </BlockLink>
-          {false && <Tweet />}
         </Flex>
-      </Box>
     </Flex>
   </Banner>
 ))
@@ -140,13 +114,8 @@ const Intro = props =>
       my={5}
     >
       <Measure>
-        Rebass is a library of highly-composable, primitive UI components for React,
+        Rebass Native is a port of Rebass for <em>React Native</em>. It's a library of highly-composable, primitive UI components for React,
         built with styled-system to make building consistent, responsive web apps simpler and faster.
-        {/*
-        Based upon a configurable design system,
-        Rebass’s props API makes building consistent,
-        responsive web apps simpler and faster.
-        */}
       </Measure>
     </Text>
     <Heading>
@@ -159,7 +128,6 @@ const Intro = props =>
       {[
         'Functional stateless UI components',
         'Style encapsulation with CSS-in-JS and styled-components',
-        'No external CSS dependencies',
         'Configurable theming',
         'Extensible base components',
         'Design-system based consistency',
@@ -201,31 +169,6 @@ const quotes = [
 ]
 
 
-const code = `<Box px={4} py={5} color='white' bg='blue'>
-  <Heading
-    is='h1'
-    fontSize={[ 4, 5, 6 ]}>
-    Hello, Rebass
-  </Heading>
-</Box>
-<Flex
-  px={4}
-  py={5}
-  alignItems='center'>
-  <Heading color='blue'>
-    Beep
-  </Heading>
-  <Box mx='auto' />
-  <Button>
-    Beep
-  </Button>
-  <ButtonOutline ml={2}>
-    Boop
-  </ButtonOutline>
-</Flex>
-`
-
-
 const CTA = props =>
   <Box py={5}>
     <Flex flexWrap='wrap' alignItems='center'>
@@ -234,7 +177,7 @@ const CTA = props =>
           Getting Started
         </Heading>
         <Text fontWeight='bold' mb={3}>
-          Install Rebass now and read the docs to get started
+          Install Rebass Native now and read the docs to get started
         </Text>
         <Pre mb={3}>{install}</Pre>
       </Box>
@@ -274,7 +217,7 @@ export default class extends React.Component {
   render () {
     return (
       <React.Fragment>
-        {/* <Hero /> */}
+        <Hero />
         <Container maxWidth={1280} pb={6}>
           <Intro />
           <CTA />

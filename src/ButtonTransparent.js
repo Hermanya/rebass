@@ -3,7 +3,10 @@ import Button from './Button'
 
 export const ButtonTransparent = sys({
   is: Button,
-  bg: 'transparent'
+  bg: 'transparent',
+  textProps: {
+    color: 'black'
+  }
 })
 
 ButtonTransparent.displayName = 'ButtonTransparent'

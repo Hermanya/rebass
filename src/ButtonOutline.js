@@ -4,7 +4,10 @@ import Button from './Button'
 
 export const ButtonOutline = sys({
   is: Button,
-  bg: 'transparent'
+  bg: 'transparent',
+  textProps: {
+    color: 'black'
+  }
 }, props => ({
   borderWidth: 2,
   borderColor: themeGet('colors.' + props.textProps.color, props.textProps.color)(props),

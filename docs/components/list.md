@@ -141,7 +141,7 @@ Extends [Button](#button)
 Extends [Button](#button)
 
 ```.jsx
-<ButtonTransparent>
+<ButtonTransparent textProps={{color: 'blue'}}>
   Hello
 </ButtonTransparent>
 
@@ -363,7 +363,11 @@ Extends [Image](#image)
 
 ```.jsx
 <Image
-  src='https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=2048&q=20'
+  style={{
+    height: '100px',
+    width: '100px'
+  }}
+  source={{uri: 'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=200'}}
 />
 
 ```
@@ -437,9 +441,9 @@ Extends [Box](#box)
 
 ```.jsx
 <Card width={256}>
-  <BackgroundImage
-    ratio={1}
-    src='https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=2048&q=20'
+  <Image
+    style={{width: '100%', height: '100px'}}
+    source={{uri: photo}}
   />
   <Subhead p={2}>
     Hello

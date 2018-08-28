@@ -4,11 +4,11 @@ import RebassNative from 'rebass-native'
 
 export const ButtonTransparentScreen = () => <RebassNative.Box>
   <RebassNative.Heading>ButtonTransparent</RebassNative.Heading>
-  <RebassNative.ButtonTransparent>
+  <RebassNative.ButtonTransparent textProps={{color: 'blue'}}>
   Hello
 </RebassNative.ButtonTransparent>
 
-  <RebassNative.Code>{`<ButtonTransparent>
+  <RebassNative.Code>{`<ButtonTransparent textProps={{color: 'blue'}}>
   Hello
 </ButtonTransparent>
 `}</RebassNative.Code>
