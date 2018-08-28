@@ -1,5 +1,5 @@
 import sys from 'native-system-components'
-import {Text} from 'react-primitives'
+import {Text} from './Text'
 export const Code = sys({
   is: Text,
   fontSize: 1,

@@ -6,10 +6,7 @@ export const Circle = sys({
   size: 24,
   align: 'center',
   borderRadius: '99999px'
-},
-'textAlign',
-'size'
-)
+}, 'textAlign', 'size')
 
 Circle.displayName = 'Circle'
 

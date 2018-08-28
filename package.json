@@ -7,9 +7,10 @@
   "scripts": {
     "prepare": "babel src -d dist",
     "size": "bundlesize",
-    "generate-docs": "./docs/_build.js",
-    "serve-docs": "x0 docs",
-    "start": "cd expo-example; exp start; cd .."
+    "workaround": "babel node_modules/react-native-web/dist/ -d node_modules/react-native-web/dist/",
+    "generate-examples": "rm docs/components/*; rm examples/app/screens/*; npm run prepare; node generate-examples.js;",
+    "docs": "x0 docs",
+    "start": "cd examples/app; exp start; cd ../.."
   },
   "keywords": [
     "components",
@@ -93,8 +94,7 @@
     }
   ],
   "x0": {
-    "title": "Rebass",
-    "template": "./docs/_template.js",
-    "basename": "/rebass"
+    "title": "Rebass Native",
+    "basename": "/rebass-native"
   }
 }

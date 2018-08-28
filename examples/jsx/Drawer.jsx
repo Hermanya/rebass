@@ -1,0 +1,10 @@
+<div>
+  <Drawer
+    open={false}
+    side='right'
+    p={3}
+    color='white'
+    bg='black'>
+    <Heading>Hello</Heading>
+  </Drawer>
+</div>

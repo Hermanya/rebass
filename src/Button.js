@@ -1,7 +1,7 @@
 import React from 'react'
 import sys from 'native-system-components'
 import { themeGet } from 'styled-system'
-import { Touchable } from 'react-primitives'
+import { Touchable, Platform } from 'react-primitives'
 import {Text, Box} from './'
 
 class ButtonHelper extends React.Component {
@@ -19,6 +19,8 @@ class ButtonHelper extends React.Component {
     )
   }
 }
+
+ButtonHelper.displayName = 'Box'
 
 export const Button = sys({
   is: ButtonHelper,
@@ -41,7 +43,10 @@ props => ({
   borderWidth: 2,
   borderColor: themeGet(`colors.${props.bg}`, props.bg)(props),
   borderStyle: 'solid'
-}))
+}),
+Platform.OS === 'web' ? {
+  display: 'inline-block'
+} : {})
 
 Button.displayName = 'Button'
 

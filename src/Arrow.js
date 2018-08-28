@@ -4,9 +4,9 @@ export const Arrow = sys({
   direction: 'down'
 }, props => {
   const borderTop = props.direction === 'down' ? {
-    borderTopWidth: 7
+    borderTopWidth: '7px'
   } : null
-  const borderBottom = props.direction === 'up' ? { borderBottomWidth: 7 } : null
+  const borderBottom = props.direction === 'up' ? { borderBottomWidth: '7px' } : null
   return {
     // display: 'inline-block',
     width: 0,
@@ -14,9 +14,9 @@ export const Arrow = sys({
     // verticalAlign: 'middle',
     borderStyle: 'solid',
     borderRightColor: 'transparent',
-    borderRightWidth: 5,
+    borderRightWidth: '5px',
     borderLeftColor: 'transparent',
-    borderLeftWidth: 5,
+    borderLeftWidth: '5px',
     ...borderTop,
     ...borderBottom
   }

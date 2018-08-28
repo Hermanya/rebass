@@ -20,6 +20,8 @@ import {
   Provider
 } from 'rebass-native'
 
+import {ButtonScreen} from './screens/ButtonScreen.js'
+
 const theme = {
   colors: {
     blue: '#6785d0',
@@ -51,6 +53,7 @@ export default class App extends React.Component {
     return (
       <Provider theme={theme}>
         <ScrollView>
+          <ButtonScreen />
           <Container pt={5}>
             <Heading>Components</Heading>
             {/* <Switch value={this.state.switchOn} onValueChange={() => this.setState({

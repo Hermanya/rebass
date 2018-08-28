@@ -5,10 +5,6 @@ import Button from './Button'
 export const ButtonOutline = sys({
   is: Button,
   bg: 'transparent'
-  // hover: {
-  //   color: 'white',
-  //   backgroundColor: 'blue',
-  // }
 }, props => ({
   borderWidth: 2,
   borderColor: themeGet('colors.' + props.textProps.color, props.textProps.color)(props),

@@ -1,13 +1,13 @@
 import sys from 'native-system-components'
-import {View, Platform} from 'react-primitives'
+import {Box} from './'
 export const Divider = sys({
-  is: {
-    web: 'hr'
-  }[Platform.OS] || View,
+  is: Box,
   mx: 0,
   my: 3,
-  borderWidth: 0,
-  borderBottomWidth: 1,
+  borderTopWidth: 0,
+  borderLeftWidth: 0,
+  borderRightWidth: 0,
+  borderBottomWidth: '1px',
   borderStyle: 'solid',
   borderColor: 'gray'
 }, 'space', 'color')

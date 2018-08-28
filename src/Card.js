@@ -19,8 +19,6 @@ export const Card = sys({
   bg: 'white',
   borderRadius: 2,
   ...shadow
-// }, {
-//   overflow: 'hidden'
 }, 'space', 'color')
 
 Card.displayName = 'Card'

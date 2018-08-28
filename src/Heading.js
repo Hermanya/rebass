@@ -1,6 +1,6 @@
 import React from 'react'
 import sys from 'native-system-components'
-import { Text } from 'react-primitives'
+import { Text } from './'
 export const Heading = sys({
   is: Text,
   fontSize: 5,

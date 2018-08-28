@@ -1,4 +1,5 @@
-export { Flex, Box } from 'native-grid-styled'
+export { Flex } from 'native-grid-styled'
+export { Box } from './Box'
 
 export { default as theme } from './theme'
 export { colors, createColors } from './colors'
@@ -23,7 +24,6 @@ export { Truncate } from './Truncate'
 export { Blockquote } from './Blockquote'
 export { Pre } from './Pre'
 export { Code } from './Code'
-export { Samp } from './Samp'
 export { Measure } from './Measure'
 export { Label } from './Label'
 
@@ -50,11 +50,11 @@ export { Badge } from './Badge'
 export { Circle } from './Circle'
 export { Dot } from './Dot'
 export { Arrow } from './Arrow'
-export { Donut } from './Donut'
 
 export {
   Position,
-  Absolute
+  Absolute,
+  Relative
 } from './Position'
 
 export { Modal } from './Modal'

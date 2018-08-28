@@ -1,5 +1,6 @@
+import React from 'react'
 import sys from 'native-system-components'
-import { Flex } from 'native-grid-styled'
+import { Flex, Text } from './'
 
 export const Banner = sys({
   is: Flex,
@@ -11,7 +12,8 @@ export const Banner = sys({
   // backgroundPosition: 'center',
   minHeight: 100,
   // color: 'white',
-  bg: 'black'
+  bg: 'black',
+  children: <Text color='white'>Banner</Text>
 },
 'minHeight',
 'backgroundSize',
