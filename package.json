@@ -10,8 +10,9 @@
     "workaround": "babel node_modules/react-native-web/dist/ -d node_modules/react-native-web/dist/",
     "generate-examples": "rm docs/components/*; rm examples/app/screens/*; npm run prepare; node generate-examples.js;",
     "docs": "x0 docs",
-    "deploy": "x0 build docs -d site; gh-pages -d site",
-    "start": "cd examples/app; exp start; cd ../.."
+    "build": "x0 build docs -d site",
+    "local-deploy": "npm run build; gh-pages -d site",
+    "start": "cd examples/app; npm start; cd ../.."
   },
   "keywords": [
     "components",

@@ -1,6 +1,6 @@
 # Rebass-native
 
-Port of Rebass for react-native, a UI component library & design system,
+Port of [Rebass](https://github.com/jxnblk/rebass) for react-native, a UI component library & design system,
 built with [styled-system][system],
 with support for
 [styled-components][sc].
@@ -21,8 +21,10 @@ with support for
 
 
 ```sh
-npm i rebass-native@next
+npm i rebass-native
 ```
+
+[See Demo](https://snack.expo.io/@git/github.com/hermanya/rebass-native:examples/app)
 
 Rebass-native is a port of Rebass, a library of highly-composable, primitive UI components for React,
 built with styled-components to keep styles isolated and reduce the need to write custom Styles in your application.
@@ -70,7 +72,7 @@ const App = props => (
 
 Try it out:
 
-https://codesandbox.io/s/github/hermanya/rebass-native/tree/master/examples/sandbox
+https://snack.expo.io/@git/github.com/hermanya/rebass-native:examples/app
 
 ### Architectural Approach
 

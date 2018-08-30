@@ -2,7 +2,7 @@
 # Getting Started
 
 ```sh
-npm i rebass-native@next
+npm i rebass-native
 ```
 
 ## Provider
