@@ -11,24 +11,24 @@
 
 Extends: [MessageHelper](/components/MessageHelper)
 
-prop | default | theme key | style type
----|---|---|---
-m |  | space | responsive
-mt |  | space | responsive
-mr |  | space | responsive
-mb |  | space | responsive
-ml |  | space | responsive
-mx |  | space | responsive
-my |  | space | responsive
-p |  | space | responsive
-pt |  | space | responsive
-pr |  | space | responsive
-pb |  | space | responsive
-pl |  | space | responsive
-px | 3 | space | responsive
-py | 2 | space | responsive
-color |  | colors | responsive
-bg | blue | colors | responsive
-flexDirection | row | N/A | responsive
-alignItems | center | N/A | responsive
-minHeight | 48px | minHeights | responsive
+prop | default | theme key
+---|---|---
+m |  | space
+mt |  | space
+mr |  | space
+mb |  | space
+ml |  | space
+mx |  | space
+my |  | space
+p |  | space
+pt |  | space
+pr |  | space
+pb |  | space
+pl |  | space
+px | 3 | space
+py | 2 | space
+color |  | colors
+bg | blue | colors
+flexDirection | row | N/A
+alignItems | center | N/A
+minHeight | 48px | minHeights

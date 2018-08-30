@@ -1,10 +1,18 @@
 
 import React from 'react';
-import RebassNative from 'rebass-native'
+import {ScrollView} from 'react-native'
+import * as RebassNative from 'rebass-native'
 
-export const BoxScreen = () => <RebassNative.Box>
-  <RebassNative.Heading>Box</RebassNative.Heading>
-  <RebassNative.Box
+export class BoxScreen extends React.Component {
+  static navigationOptions = {
+    title: 'Box',
+  };
+  render () {
+    return (
+      <ScrollView>
+        <RebassNative.Subhead mx={4} my={2}>Demo</RebassNative.Subhead>
+        <RebassNative.Banner bg="white">
+        <RebassNative.Box
   px={3}
   py={4}
   color='white'
@@ -13,7 +21,10 @@ export const BoxScreen = () => <RebassNative.Box>
 </RebassNative.Box>
 
 
-  <RebassNative.Code>{`<Box
+        </RebassNative.Banner>
+
+        <RebassNative.Subhead mx={4} my={2}>Code</RebassNative.Subhead>
+        <RebassNative.Code bg="black" color="lime" p={4}>{`<Box
   px={3}
   py={4}
   color='white'
@@ -22,7 +33,16 @@ export const BoxScreen = () => <RebassNative.Box>
 </Box>
 
 `}</RebassNative.Code>
-  <RebassNative.Text>{`Extends: [Box](http://jxnblk.com/rebass/components/Box)`}</RebassNative.Text>
-  <RebassNative.Pre>{``}</RebassNative.Pre>
-</RebassNative.Box>
+
+        <RebassNative.Subhead mx={4} my={2}>Inheritance</RebassNative.Subhead>
+        <RebassNative.Flex px={4} flexDirection="row"><RebassNative.ButtonOutline onPress={() => {
+    // open http://jxnblk.com/rebass/components/Box
+  }}>Box</RebassNative.ButtonOutline></RebassNative.Flex>
+
+        <RebassNative.Subhead mx={4} my={2}>Props</RebassNative.Subhead>
+        
+      </ScrollView>
+    )
+  }
+}
     

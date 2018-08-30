@@ -7,21 +7,21 @@
 
 
 
-prop | default | theme key | style type
----|---|---|---
-m |  | space | responsive
-mt |  | space | responsive
-mr |  | space | responsive
-mb |  | space | responsive
-ml |  | space | responsive
-mx |  | space | responsive
-my |  | space | responsive
-p |  | space | responsive
-pt |  | space | responsive
-pr |  | space | responsive
-pb |  | space | responsive
-pl |  | space | responsive
-px |  | space | responsive
-py |  | space | responsive
-color |  | colors | responsive
-bg |  | colors | responsive
+prop | default | theme key
+---|---|---
+m |  | space
+mt |  | space
+mr |  | space
+mb |  | space
+ml |  | space
+mx |  | space
+my |  | space
+p |  | space
+pt |  | space
+pr |  | space
+pb |  | space
+pl |  | space
+px |  | space
+py |  | space
+color |  | colors
+bg |  | colors

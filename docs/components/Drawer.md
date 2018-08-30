@@ -18,11 +18,11 @@
 
 Extends: [Box](/components/Box)
 
-prop | default | theme key | style type
----|---|---|---
-position | absolute | N/A | responsive
-color |  | colors | responsive
-bg | black | colors | responsive
-width | 320 | N/A | responsive
-zIndex |  | N/A | responsive
-height |  | heights | responsive
+prop | default | theme key
+---|---|---
+position | absolute | N/A
+color |  | colors
+bg | black | colors
+width | 320 | N/A
+zIndex |  | N/A
+height |  | heights

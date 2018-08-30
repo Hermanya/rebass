@@ -1,6 +1,6 @@
 
 import { createStackNavigator } from 'react-navigation'
-
+import {IndexScreen} from './IndexScreen.js'
 import {FlexScreen} from './screens/FlexScreen.js'
 import {BoxScreen} from './screens/BoxScreen.js'
 import {ProviderScreen} from './screens/ProviderScreen.js'
@@ -48,6 +48,7 @@ import {HideScreen} from './screens/HideScreen.js'
 
 export const RootStack = createStackNavigator(
   {
+    IndexScreen,
     FlexScreen,
     BoxScreen,
     ProviderScreen,
@@ -94,6 +95,6 @@ export const RootStack = createStackNavigator(
     HideScreen
   },
   {
-    initialRouteName: 'ButtonScreen'
+    initialRouteName: 'IndexScreen'
   }
 )

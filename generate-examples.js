@@ -105,44 +105,88 @@ const content = template({ components })
 
 fs.writeFileSync(path.join(__dirname, 'docs', 'components', 'list.md'), content)
 
-const createPropsTable = docs => {
+const propsTableColumns = [
+  'prop',
+  'default',
+  'theme key'
+  // 'style type'
+]
+const createMarkdownPropsTable = docs => {
   const { propTypes = {}, defaultProps = {} } = docs
   const keys = Object.keys(propTypes)
   if (!keys.length) return ''
-  const cols = [
-    'prop',
-    'default',
-    'theme key',
-    'style type'
-  ]
+
   const head = [
-    cols.join(' | '),
-    cols.map(n => '---').join('|')
+    propsTableColumns.join(' | '),
+    propsTableColumns.map(n => '---').join('|')
   ].join('\n')
   const rows = keys.map(key => {
     const prop = propTypes[key] || {}
     return [
       key,
       defaultProps[key] || '',
-      prop.themeKey || 'N/A',
-      prop.styleType || 'N/A'
+      prop.themeKey || 'N/A'
+      // prop.styleType || 'N/A'
     ].join(' | ')
   })
 
   return [ head, ...rows ].join('\n')
 }
 
+const createJsxPropsTable = docs => {
+  const { propTypes = {}, defaultProps = {} } = docs
+  const keys = Object.keys(propTypes)
+  if (!keys.length) return ''
+
+  const Column = `RebassNative.Column flexGrow={1} width={1/${propsTableColumns.length}}`
+  const head = `
+    ${propsTableColumns.map(col => `<${Column}>
+        <RebassNative.Lead>${col}</RebassNative.Lead>
+      </RebassNative.Column>`).join('\n')}
+  `
+  const rows = keys.map(key => {
+    const prop = propTypes[key] || {}
+    return `
+    ${[
+    key,
+    defaultProps[key] || '',
+    prop.themeKey || 'N/A'
+    // prop.styleType || 'N/A'
+  ].map(col => `<${Column}>${col}</RebassNative.Column>`).join('\n')}
+    `
+  })
+
+  return [
+    '<RebassNative.Row flexWrap="wrap" justifyContent="space-between" px={4}>',
+    head,
+    ...rows,
+    '</RebassNative.Row>'
+  ].join('\n')
+}
+
 const getName = component => component.displayName ||
   component.name ||
   component
 
-const getExtensions = ({ extensions = [] }, originalName) => {
+const getMarkdownExtensions = ({ extensions = [] }, originalName) => {
   if (!extensions.length) return ''
   const names = extensions.map(getName)
   const links = names.map(name => `[${name}](${name === originalName
     ? `http://jxnblk.com/rebass/components/${name}`
     : `/components/${name}`})`)
   return 'Extends: ' + links.join(' > ')
+}
+
+const getJsxExtensions = ({ extensions = [] }, originalName) => {
+  if (!extensions.length) return ''
+  const names = extensions.map(getName)
+  const links = names
+    .map(name => `<RebassNative.ButtonOutline onPress={() => {
+    ${name === originalName
+    ? `// open http://jxnblk.com/rebass/components/${name}`
+    : `this.props.navigation.navigate('${name}Screen')`}
+  }}>${name}</RebassNative.ButtonOutline>`)
+  return links.join('<RebassNative.Text> → </RebassNative.Text>')
 }
 
 // build individual component files
@@ -154,8 +198,8 @@ Object.keys(RebassNative)
     const example = examples[name] ? fs.readFileSync(examples[name], 'utf8')
       : (docs.extensions || []).map(getName).some(ext => ext === 'Text')
         ? `<${name} children="Example"/>` : `<${name}/>`
-    const table = createPropsTable(docs)
-    const extensions = getExtensions(docs, name)
+    const table = createMarkdownPropsTable(docs)
+    const extensions = getMarkdownExtensions(docs, name)
     const content = [
       '# ' + name,
       '```.jsx\n' + example + '\n```\n\n',
@@ -169,15 +213,33 @@ Object.keys(RebassNative)
 
     fs.writeFileSync(path.join(__dirname, 'examples', 'app', 'screens', name + 'Screen.js'), `
 import React from 'react';
-import RebassNative from 'rebass-native'
+import {ScrollView} from 'react-native'
+import * as RebassNative from 'rebass-native'
 
-export const ${name}Screen = () => <RebassNative.Box>
-  <RebassNative.Heading>${name}</RebassNative.Heading>
-  ${example.replace(/<\//i, '</RebassNative.').replace(/(<)([^/])/i, '<RebassNative.$2')}
-  <RebassNative.Code>{\`${example}\`}</RebassNative.Code>
-  <RebassNative.Text>{\`${extensions}\`}</RebassNative.Text>
-  <RebassNative.Pre>{\`${table}\`}</RebassNative.Pre>
-</RebassNative.Box>
+export class ${name}Screen extends React.Component {
+  static navigationOptions = {
+    title: '${name}',
+  };
+  render () {
+    return (
+      <ScrollView>
+        <RebassNative.Subhead mx={4} my={2}>Demo</RebassNative.Subhead>
+        <RebassNative.Banner bg="white">
+        ${example.replace(/<\//g, '</RebassNative.').replace(/(<)([^/])/g, '<RebassNative.$2')}
+        </RebassNative.Banner>
+
+        <RebassNative.Subhead mx={4} my={2}>Code</RebassNative.Subhead>
+        <RebassNative.Code bg="black" color="lime" p={4}>{\`${example}\`}</RebassNative.Code>
+
+        <RebassNative.Subhead mx={4} my={2}>Inheritance</RebassNative.Subhead>
+        <RebassNative.Flex px={4} flexDirection="row">${getJsxExtensions(docs, name)}</RebassNative.Flex>
+
+        <RebassNative.Subhead mx={4} my={2}>Props</RebassNative.Subhead>
+        ${createJsxPropsTable(docs)}
+      </ScrollView>
+    )
+  }
+}
     `)
   })
 
@@ -185,15 +247,15 @@ console.log('Generated docs/components/list.md')
 
 fs.writeFileSync(path.join(__dirname, 'examples', 'app', 'RootStack.js'), `
 import { createStackNavigator } from 'react-navigation'
-import {IndexScreen} from './screens/IndexScreen.js'
+import {IndexScreen} from './IndexScreen.js'
 ${components
     .map(getName)
     .map(name => `import {${name}Screen} from './screens/${name}Screen.js'`)
     .join('\n')}
 
 export const RootStack = createStackNavigator(
-  IndexScreen,
   {
+    IndexScreen,
     ${components.map(getName).map(name => `${name}Screen`).join(',\n    ')}
   },
   {
@@ -202,17 +264,29 @@ export const RootStack = createStackNavigator(
 )
 `)
 
-// fs.writeFileSync(path.join(__dirname, 'examples', 'app', 'IndexScreen.js'), `
+fs.writeFileSync(path.join(__dirname, 'examples', 'app', 'IndexScreen.js'), `
 
-// ${components
-//     .map(getName)
-//     .map(name => `import {${name}Screen} from './screens/${name}Screen.js'`)
-//     .join('\n')}
+import React, { Component } from 'react'
+import {
+  Flex,
+  ButtonTransparent
+} from 'rebass-native'
+import {ScrollView} from 'react-native'
 
-// export const IndexScreen = () => {
-//   return <Box>
-//     // this.props.navigation.navigate(`${name}Screen`)
-//     ${components.map(getName).map(name => <Box></Box>).join('\n    ')}
-//   </Box>
-// }
-// `)
+export class IndexScreen extends Component {
+  static navigationOptions = {
+    title: 'Rebass Native',
+  };
+  render () {
+    return (<ScrollView>
+      ${components.map(getName).map(name => `
+      <ButtonTransparent
+        textProps={{color: 'black', textAlign: 'left'}}
+        onPress={() => this.props.navigation.navigate('${name}Screen')}
+      >${name}</ButtonTransparent>
+      `).join('\n')}
+    </ScrollView>)
+  }
+}
+
+`)

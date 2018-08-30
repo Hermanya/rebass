@@ -23,28 +23,28 @@
 
 Extends: [Box](/components/Box) > [Box](/components/Box)
 
-prop | default | theme key | style type
----|---|---|---
-color |  | colors | responsive
-bg | white | colors | responsive
-borderRadius | 2 | radii | responsive
-border | 1 | borders | responsive
-borderTop |  | borders | responsive
-borderRight |  | borders | responsive
-borderBottom |  | borders | responsive
-borderLeft |  | borders | responsive
-borderColor | gray | colors | responsive
-m |  | space | responsive
-mt |  | space | responsive
-mr |  | space | responsive
-mb |  | space | responsive
-ml |  | space | responsive
-mx |  | space | responsive
-my |  | space | responsive
-p |  | space | responsive
-pt |  | space | responsive
-pr |  | space | responsive
-pb |  | space | responsive
-pl |  | space | responsive
-px |  | space | responsive
-py |  | space | responsive
+prop | default | theme key
+---|---|---
+color |  | colors
+bg | white | colors
+borderRadius | 2 | radii
+border | 1 | borders
+borderTop |  | borders
+borderRight |  | borders
+borderBottom |  | borders
+borderLeft |  | borders
+borderColor | gray | colors
+m |  | space
+mt |  | space
+mr |  | space
+mb |  | space
+ml |  | space
+mx |  | space
+my |  | space
+p |  | space
+pt |  | space
+pr |  | space
+pb |  | space
+pl |  | space
+px |  | space
+py |  | space

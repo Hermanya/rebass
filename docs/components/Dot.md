@@ -11,29 +11,29 @@
 
 
 
-prop | default | theme key | style type
----|---|---|---
-m |  | space | responsive
-mt |  | space | responsive
-mr |  | space | responsive
-mb |  | space | responsive
-ml |  | space | responsive
-mx |  | space | responsive
-my |  | space | responsive
-p |  | space | responsive
-pt |  | space | responsive
-pr |  | space | responsive
-pb |  | space | responsive
-pl |  | space | responsive
-px |  | space | responsive
-py |  | space | responsive
-size | 16 | N/A | responsive
-color |  | colors | responsive
-bg | grey | colors | responsive
-borderRadius | 99999 | radii | responsive
-border | 4 | borders | responsive
-borderTop |  | borders | responsive
-borderRight |  | borders | responsive
-borderBottom |  | borders | responsive
-borderLeft |  | borders | responsive
-borderColor | transparent | colors | responsive
+prop | default | theme key
+---|---|---
+m |  | space
+mt |  | space
+mr |  | space
+mb |  | space
+ml |  | space
+mx |  | space
+my |  | space
+p |  | space
+pt |  | space
+pr |  | space
+pb |  | space
+pl |  | space
+px |  | space
+py |  | space
+size | 16 | N/A
+color |  | colors
+bg | grey | colors
+borderRadius | 99999 | radii
+border | 4 | borders
+borderTop |  | borders
+borderRight |  | borders
+borderBottom |  | borders
+borderLeft |  | borders
+borderColor | transparent | colors

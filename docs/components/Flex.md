@@ -18,9 +18,9 @@
 
 Extends: [Box](/components/Box)
 
-prop | default | theme key | style type
----|---|---|---
-flexWrap |  | N/A | responsive
-flexDirection |  | N/A | responsive
-alignItems |  | N/A | responsive
-justifyContent |  | N/A | responsive
+prop | default | theme key
+---|---|---
+flexWrap |  | N/A
+flexDirection |  | N/A
+alignItems |  | N/A
+justifyContent |  | N/A

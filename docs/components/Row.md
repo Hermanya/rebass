@@ -12,20 +12,20 @@
 
 Extends: [Flex](/components/Flex) > [Box](/components/Box)
 
-prop | default | theme key | style type
----|---|---|---
-flexDirection | row | N/A | responsive
-m |  | space | responsive
-mt |  | space | responsive
-mr |  | space | responsive
-mb |  | space | responsive
-ml |  | space | responsive
-mx | -3 | space | responsive
-my |  | space | responsive
-p |  | space | responsive
-pt |  | space | responsive
-pr |  | space | responsive
-pb |  | space | responsive
-pl |  | space | responsive
-px |  | space | responsive
-py |  | space | responsive
+prop | default | theme key
+---|---|---
+flexDirection | row | N/A
+m |  | space
+mt |  | space
+mr |  | space
+mb |  | space
+ml |  | space
+mx | -3 | space
+my |  | space
+p |  | space
+pt |  | space
+pr |  | space
+pb |  | space
+pl |  | space
+px |  | space
+py |  | space

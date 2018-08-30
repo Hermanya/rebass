@@ -1,6 +1,4 @@
 <Border
-  py={2}
-  top
-  bottom>
+  py={2}>
   Hello
 </Border>

@@ -3,10 +3,9 @@
 ```.jsx
 <Banner
   color='white'
-  bg='darken'
-  backgroundImage='https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=2048&q=20'>
+  bg='black'>
   <Heading
-    f={[ 4, 5, 6, 7 ]}>
+    f={4}>
     Hello
   </Heading>
 </Banner>
@@ -17,28 +16,28 @@
 
 Extends: [Flex](/components/Flex) > [Box](/components/Box)
 
-prop | default | theme key | style type
----|---|---|---
-m |  | space | responsive
-mt |  | space | responsive
-mr |  | space | responsive
-mb |  | space | responsive
-ml |  | space | responsive
-mx |  | space | responsive
-my |  | space | responsive
-p | 3 | space | responsive
-pt |  | space | responsive
-pr |  | space | responsive
-pb |  | space | responsive
-pl |  | space | responsive
-px |  | space | responsive
-py |  | space | responsive
-flexDirection | column | N/A | responsive
-alignItems | center | N/A | responsive
-justifyContent | center | N/A | responsive
-minHeight | 100 | minHeights | responsive
-color |  | colors | responsive
-bg | black | colors | responsive
-backgroundSize |  | N/A | responsive
-backgroundPosition |  | N/A | responsive
-backgroundImage |  | N/A | responsive
+prop | default | theme key
+---|---|---
+m |  | space
+mt |  | space
+mr |  | space
+mb |  | space
+ml |  | space
+mx |  | space
+my |  | space
+p | 3 | space
+pt |  | space
+pr |  | space
+pb |  | space
+pl |  | space
+px |  | space
+py |  | space
+flexDirection | column | N/A
+alignItems | center | N/A
+justifyContent | center | N/A
+minHeight | 100 | minHeights
+color |  | colors
+bg | black | colors
+backgroundSize |  | N/A
+backgroundPosition |  | N/A
+backgroundImage |  | N/A

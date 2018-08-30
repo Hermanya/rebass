@@ -8,7 +8,7 @@
 
 Extends: [Text](/components/Text)
 
-prop | default | theme key | style type
----|---|---|---
-fontSize |  | fontSizes | responsive
-letterSpacing | 4 | letterSpacings | responsive
+prop | default | theme key
+---|---|---
+fontSize |  | fontSizes
+letterSpacing | 4 | letterSpacings

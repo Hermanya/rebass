@@ -1,9 +1,8 @@
 <Banner
   color='white'
-  bg='darken'
-  backgroundImage='https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=2048&q=20'>
+  bg='black'>
   <Heading
-    f={[ 4, 5, 6, 7 ]}>
+    f={4}>
     Hello
   </Heading>
 </Banner>

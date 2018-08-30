@@ -1,10 +1,18 @@
 
 import React from 'react';
-import RebassNative from 'rebass-native'
+import {ScrollView} from 'react-native'
+import * as RebassNative from 'rebass-native'
 
-export const ImageScreen = () => <RebassNative.Box>
-  <RebassNative.Heading>Image</RebassNative.Heading>
-  <RebassNative.Image
+export class ImageScreen extends React.Component {
+  static navigationOptions = {
+    title: 'Image',
+  };
+  render () {
+    return (
+      <ScrollView>
+        <RebassNative.Subhead mx={4} my={2}>Demo</RebassNative.Subhead>
+        <RebassNative.Banner bg="white">
+        <RebassNative.Image
   style={{
     height: '100px',
     width: '100px'
@@ -12,7 +20,10 @@ export const ImageScreen = () => <RebassNative.Box>
   source={{uri: 'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=200'}}
 />
 
-  <RebassNative.Code>{`<Image
+        </RebassNative.Banner>
+
+        <RebassNative.Subhead mx={4} my={2}>Code</RebassNative.Subhead>
+        <RebassNative.Code bg="black" color="lime" p={4}>{`<Image
   style={{
     height: '100px',
     width: '100px'
@@ -20,25 +31,113 @@ export const ImageScreen = () => <RebassNative.Box>
   source={{uri: 'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=200'}}
 />
 `}</RebassNative.Code>
-  <RebassNative.Text>{`Extends: [Image](http://jxnblk.com/rebass/components/Image)`}</RebassNative.Text>
-  <RebassNative.Pre>{`prop | default | theme key | style type
----|---|---|---
-m |  | space | responsive
-mt |  | space | responsive
-mr |  | space | responsive
-mb |  | space | responsive
-ml |  | space | responsive
-mx |  | space | responsive
-my |  | space | responsive
-p |  | space | responsive
-pt |  | space | responsive
-pr |  | space | responsive
-pb |  | space | responsive
-pl |  | space | responsive
-px |  | space | responsive
-py |  | space | responsive
-width |  | N/A | responsive
-color |  | colors | responsive
-bg |  | colors | responsive`}</RebassNative.Pre>
-</RebassNative.Box>
+
+        <RebassNative.Subhead mx={4} my={2}>Inheritance</RebassNative.Subhead>
+        <RebassNative.Flex px={4} flexDirection="row"><RebassNative.ButtonOutline onPress={() => {
+    // open http://jxnblk.com/rebass/components/Image
+  }}>Image</RebassNative.ButtonOutline></RebassNative.Flex>
+
+        <RebassNative.Subhead mx={4} my={2}>Props</RebassNative.Subhead>
+        <RebassNative.Row flexWrap="wrap" justifyContent="space-between" px={4}>
+
+    <RebassNative.Column flexGrow={1} width={1/3}>
+        <RebassNative.Lead>prop</RebassNative.Lead>
+      </RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}>
+        <RebassNative.Lead>default</RebassNative.Lead>
+      </RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}>
+        <RebassNative.Lead>theme key</RebassNative.Lead>
+      </RebassNative.Column>
+  
+
+    <RebassNative.Column flexGrow={1} width={1/3}>m</RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}></RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}>space</RebassNative.Column>
+    
+
+    <RebassNative.Column flexGrow={1} width={1/3}>mt</RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}></RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}>space</RebassNative.Column>
+    
+
+    <RebassNative.Column flexGrow={1} width={1/3}>mr</RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}></RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}>space</RebassNative.Column>
+    
+
+    <RebassNative.Column flexGrow={1} width={1/3}>mb</RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}></RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}>space</RebassNative.Column>
+    
+
+    <RebassNative.Column flexGrow={1} width={1/3}>ml</RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}></RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}>space</RebassNative.Column>
+    
+
+    <RebassNative.Column flexGrow={1} width={1/3}>mx</RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}></RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}>space</RebassNative.Column>
+    
+
+    <RebassNative.Column flexGrow={1} width={1/3}>my</RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}></RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}>space</RebassNative.Column>
+    
+
+    <RebassNative.Column flexGrow={1} width={1/3}>p</RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}></RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}>space</RebassNative.Column>
+    
+
+    <RebassNative.Column flexGrow={1} width={1/3}>pt</RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}></RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}>space</RebassNative.Column>
+    
+
+    <RebassNative.Column flexGrow={1} width={1/3}>pr</RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}></RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}>space</RebassNative.Column>
+    
+
+    <RebassNative.Column flexGrow={1} width={1/3}>pb</RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}></RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}>space</RebassNative.Column>
+    
+
+    <RebassNative.Column flexGrow={1} width={1/3}>pl</RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}></RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}>space</RebassNative.Column>
+    
+
+    <RebassNative.Column flexGrow={1} width={1/3}>px</RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}></RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}>space</RebassNative.Column>
+    
+
+    <RebassNative.Column flexGrow={1} width={1/3}>py</RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}></RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}>space</RebassNative.Column>
+    
+
+    <RebassNative.Column flexGrow={1} width={1/3}>width</RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}></RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}>N/A</RebassNative.Column>
+    
+
+    <RebassNative.Column flexGrow={1} width={1/3}>color</RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}></RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}>colors</RebassNative.Column>
+    
+
+    <RebassNative.Column flexGrow={1} width={1/3}>bg</RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}></RebassNative.Column>
+<RebassNative.Column flexGrow={1} width={1/3}>colors</RebassNative.Column>
+    
+</RebassNative.Row>
+      </ScrollView>
+    )
+  }
+}
     

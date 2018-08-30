@@ -36,11 +36,12 @@ export default class App extends React.Component {
       return <View><Text>Loading!</Text></View>
     }
     return (
-      <Provider theme={theme}>
-        <ScrollView>
-          <RootStack />
-        </ScrollView>
-      </Provider>
+      <RootStack />
+
+    // <Provider theme={theme}>
+    //   <ScrollView>
+    //   </ScrollView>
+    // </Provider>
     )
   }
 }

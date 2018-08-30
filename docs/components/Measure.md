@@ -11,6 +11,6 @@
 
 Extends: [MeasureHelper](/components/MeasureHelper)
 
-prop | default | theme key | style type
----|---|---|---
-maxWidth | 256 | maxWidths | responsive
+prop | default | theme key
+---|---|---
+maxWidth | 256 | maxWidths

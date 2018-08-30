@@ -19,7 +19,7 @@
 
 Extends: [Flex](/components/Flex) > [Box](/components/Box)
 
-prop | default | theme key | style type
----|---|---|---
-flexDirection | row | N/A | responsive
-borderColor | gray | colors | responsive
+prop | default | theme key
+---|---|---
+flexDirection | row | N/A
+borderColor | gray | colors
