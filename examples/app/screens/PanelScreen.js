@@ -36,7 +36,7 @@ export const PanelScreen = () => <RebassNative.Box>
   </Panel.Footer>
 </Panel>
 `}</RebassNative.Code>
-  <RebassNative.Text>{``}</RebassNative.Text>
+  <RebassNative.Text>{`Extends: [Box](/components/Box) > [Box](/components/Box)`}</RebassNative.Text>
   <RebassNative.Pre>{`prop | default | theme key | style type
 ---|---|---|---
 color |  | colors | responsive

@@ -21,6 +21,8 @@
 
 
 
+Extends: [Box](/components/Box) > [Box](/components/Box)
+
 prop | default | theme key | style type
 ---|---|---|---
 color |  | colors | responsive

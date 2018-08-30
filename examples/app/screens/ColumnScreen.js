@@ -16,7 +16,7 @@ export const ColumnScreen = () => <RebassNative.Box>
   <Column>Column</Column>
 </Row>
 `}</RebassNative.Code>
-  <RebassNative.Text>{`Extends: [Box](/components/Box)`}</RebassNative.Text>
+  <RebassNative.Text>{`Extends: [Box](/components/Box) > [Box](/components/Box)`}</RebassNative.Text>
   <RebassNative.Pre>{`prop | default | theme key | style type
 ---|---|---|---
 m |  | space | responsive

@@ -3,8 +3,6 @@ const path = require('path')
 const systemDocs = require('system-docs')
 const RebassNative = require('./dist')
 
-const filename = path.join(__dirname, 'docs', 'components', 'list.md')
-
 const keys = Object.keys(RebassNative)
 
 const examples = fs.readdirSync(
@@ -105,7 +103,7 @@ const components = keys
 
 const content = template({ components })
 
-fs.writeFileSync(filename, content)
+fs.writeFileSync(path.join(__dirname, 'docs', 'components', 'list.md'), content)
 
 const createPropsTable = docs => {
   const { propTypes = {}, defaultProps = {} } = docs
@@ -184,3 +182,37 @@ export const ${name}Screen = () => <RebassNative.Box>
   })
 
 console.log('Generated docs/components/list.md')
+
+fs.writeFileSync(path.join(__dirname, 'examples', 'app', 'RootStack.js'), `
+import { createStackNavigator } from 'react-navigation'
+import {IndexScreen} from './screens/IndexScreen.js'
+${components
+    .map(getName)
+    .map(name => `import {${name}Screen} from './screens/${name}Screen.js'`)
+    .join('\n')}
+
+export const RootStack = createStackNavigator(
+  IndexScreen,
+  {
+    ${components.map(getName).map(name => `${name}Screen`).join(',\n    ')}
+  },
+  {
+    initialRouteName: 'IndexScreen'
+  }
+)
+`)
+
+// fs.writeFileSync(path.join(__dirname, 'examples', 'app', 'IndexScreen.js'), `
+
+// ${components
+//     .map(getName)
+//     .map(name => `import {${name}Screen} from './screens/${name}Screen.js'`)
+//     .join('\n')}
+
+// export const IndexScreen = () => {
+//   return <Box>
+//     // this.props.navigation.navigate(`${name}Screen`)
+//     ${components.map(getName).map(name => <Box></Box>).join('\n    ')}
+//   </Box>
+// }
+// `)

@@ -18,7 +18,7 @@ export const BorderScreen = () => <RebassNative.Box>
   Hello
 </Border>
 `}</RebassNative.Code>
-  <RebassNative.Text>{``}</RebassNative.Text>
+  <RebassNative.Text>{`Extends: [Box](/components/Box) > [Box](/components/Box)`}</RebassNative.Text>
   <RebassNative.Pre>{`prop | default | theme key | style type
 ---|---|---|---
 borderColor | gray | colors | responsive

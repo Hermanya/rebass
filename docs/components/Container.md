@@ -9,7 +9,7 @@
 
 
 
-Extends: [Box](/components/Box)
+Extends: [Box](/components/Box) > [Box](/components/Box)
 
 prop | default | theme key | style type
 ---|---|---|---

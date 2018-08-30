@@ -342,6 +342,7 @@ Extends [Box](#box)
 - `borderColor`
 
 ## Border
+Extends [Box](#box)
 
 ```.jsx
 <Border
@@ -443,7 +444,7 @@ Extends [Box](#box)
 <Card width={256}>
   <Image
     style={{width: '100%', height: '100px'}}
-    source={{uri: photo}}
+    source={{uri: 'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=200'}}
   />
   <Subhead p={2}>
     Hello
@@ -458,6 +459,7 @@ Extends [Box](#box)
 - `boxShadow`
 
 ## Panel
+Extends [Box](#box)
 
 ```.jsx
 <Panel color='blue'>

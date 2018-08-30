@@ -16,7 +16,10 @@ class ButtonHelper extends React.Component {
     const { children, textProps, onPress, disabled, ...props } = this.props
     return (
       <Box {...props}>
-        <Touchable onPress={disabled ? undefined : onPress}>
+        <Touchable
+          // onPress={disabled ? undefined : onPress}
+          onPress={onPress}
+        >
           {typeof children === 'string'
             ? (
               <Text {...defaultTextProps} {...textProps}> {children}</Text>
