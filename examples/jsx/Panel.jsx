@@ -1,6 +1,6 @@
 <Panel color='blue'>
   <Panel.Header
-    color='white'
+    textProps={{color: 'white'}}
     bg='blue'>
     Hello
   </Panel.Header>
@@ -9,7 +9,9 @@
       Panel
     </Subhead>
   </Box>
-  <Panel.Footer color='blue'>
+  <Panel.Footer
+    textProps={{color: 'blue'}}
+  >
     Footer
   </Panel.Footer>
 </Panel>

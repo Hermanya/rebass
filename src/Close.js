@@ -5,7 +5,8 @@ export const Close = sys({
   p: 0,
   children: '×',
   textProps: {
-    fontSize: 3
+    fontSize: 3,
+    color: 'black'
   }
 }, {
   width: '24px',

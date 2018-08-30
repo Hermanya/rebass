@@ -12,40 +12,34 @@ export class ModalScreen extends React.Component {
       <ScrollView>
         <RebassNative.Subhead mx={4} my={2}>Demo</RebassNative.Subhead>
         <RebassNative.Banner bg="white">
-        <RebassNative.div>
-  {false && (
-    <RebassNative.div>
-      <RebassNative.Fixed
-        top={0}
-        right={0}
-        bottom={0}
-        left={0}
-      />
-      <RebassNative.Modal width={256}>
-        <RebassNative.Heading>Hello</RebassNative.Heading>
-      </RebassNative.Modal>
-    </RebassNative.div>
-  )}
-</RebassNative.div>
+        { false && (
+  <RebassNative.Absolute
+    top={0}
+    right={0}
+    bottom={0}
+    left={0}
+  >
+    <RebassNative.Modal width={256}>
+      <RebassNative.Heading>Hello</RebassNative.Heading>
+    </RebassNative.Modal>
+  </RebassNative.Absolute>
+) }
 
         </RebassNative.Banner>
 
         <RebassNative.Subhead mx={4} my={2}>Code</RebassNative.Subhead>
-        <RebassNative.Code bg="black" color="lime" p={4}>{`<div>
-  {false && (
-    <div>
-      <Fixed
-        top={0}
-        right={0}
-        bottom={0}
-        left={0}
-      />
-      <Modal width={256}>
-        <Heading>Hello</Heading>
-      </Modal>
-    </div>
-  )}
-</div>
+        <RebassNative.Code bg="black" color="lime" p={4}>{`{ false && (
+  <Absolute
+    top={0}
+    right={0}
+    bottom={0}
+    left={0}
+  >
+    <Modal width={256}>
+      <Heading>Hello</Heading>
+    </Modal>
+  </Absolute>
+) }
 `}</RebassNative.Code>
 
         <RebassNative.Subhead mx={4} my={2}>Inheritance</RebassNative.Subhead>

@@ -80,7 +80,7 @@ Extends [Box](#box)
 <Box
   px={3}
   py={4}
-  color='white'
+  textProps={{color: 'white'}}
   bg='blue'>
   Hello
 </Box>
@@ -462,7 +462,7 @@ Extends [Box](#box)
 ```.jsx
 <Panel color='blue'>
   <Panel.Header
-    color='white'
+    textProps={{color: 'white'}}
     bg='blue'>
     Hello
   </Panel.Header>
@@ -471,7 +471,9 @@ Extends [Box](#box)
       Panel
     </Subhead>
   </Box>
-  <Panel.Footer color='blue'>
+  <Panel.Footer
+    textProps={{color: 'blue'}}
+  >
     Footer
   </Panel.Footer>
 </Panel>
@@ -684,21 +686,18 @@ undefined
 Extends [Absolute](#absolute)
 
 ```.jsx
-<div>
-  {false && (
-    <div>
-      <Fixed
-        top={0}
-        right={0}
-        bottom={0}
-        left={0}
-      />
-      <Modal width={256}>
-        <Heading>Hello</Heading>
-      </Modal>
-    </div>
-  )}
-</div>
+{ false && (
+  <Absolute
+    top={0}
+    right={0}
+    bottom={0}
+    left={0}
+  >
+    <Modal width={256}>
+      <Heading>Hello</Heading>
+    </Modal>
+  </Absolute>
+) }
 
 ```
 

@@ -14,7 +14,7 @@ export class PanelScreen extends React.Component {
         <RebassNative.Banner bg="white">
         <RebassNative.Panel color='blue'>
   <RebassNative.Panel.Header
-    color='white'
+    textProps={{color: 'white'}}
     bg='blue'>
     Hello
   </RebassNative.Panel.Header>
@@ -23,7 +23,9 @@ export class PanelScreen extends React.Component {
       Panel
     </RebassNative.Subhead>
   </RebassNative.Box>
-  <RebassNative.Panel.Footer color='blue'>
+  <RebassNative.Panel.Footer
+    textProps={{color: 'blue'}}
+  >
     Footer
   </RebassNative.Panel.Footer>
 </RebassNative.Panel>
@@ -33,7 +35,7 @@ export class PanelScreen extends React.Component {
         <RebassNative.Subhead mx={4} my={2}>Code</RebassNative.Subhead>
         <RebassNative.Code bg="black" color="lime" p={4}>{`<Panel color='blue'>
   <Panel.Header
-    color='white'
+    textProps={{color: 'white'}}
     bg='blue'>
     Hello
   </Panel.Header>
@@ -42,7 +44,9 @@ export class PanelScreen extends React.Component {
       Panel
     </Subhead>
   </Box>
-  <Panel.Footer color='blue'>
+  <Panel.Footer
+    textProps={{color: 'blue'}}
+  >
     Footer
   </Panel.Footer>
 </Panel>

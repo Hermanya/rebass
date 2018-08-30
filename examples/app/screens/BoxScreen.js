@@ -15,11 +15,10 @@ export class BoxScreen extends React.Component {
         <RebassNative.Box
   px={3}
   py={4}
-  color='white'
+  textProps={{color: 'white'}}
   bg='blue'>
   Hello
 </RebassNative.Box>
-
 
         </RebassNative.Banner>
 
@@ -27,11 +26,10 @@ export class BoxScreen extends React.Component {
         <RebassNative.Code bg="black" color="lime" p={4}>{`<Box
   px={3}
   py={4}
-  color='white'
+  textProps={{color: 'white'}}
   bg='blue'>
   Hello
 </Box>
-
 `}</RebassNative.Code>
 
         <RebassNative.Subhead mx={4} my={2}>Inheritance</RebassNative.Subhead>
