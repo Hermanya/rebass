@@ -10,8 +10,8 @@ with support for
 [![Downloads][downloads-badge]][npm]
 [![Version][version-badge]][npm]
 
-[badge]: https://img.shields.io/travis/hermanya/rebass-native.svg?style=flat-square
-[travis]: https://travis-ci.org/hermanya/rebass-native
+[badge]: https://img.shields.io/travis/Hermanya/rebass-native.svg?style=flat-square
+[travis]: https://travis-ci.org/Hermanya/rebass-native
 [coverage-badge]: https://img.shields.io/codecov/c/github/hermanya/rebass-native.svg?style=flat-square
 [coverage]: https://codecov.io/github/hermanya/rebass-native
 

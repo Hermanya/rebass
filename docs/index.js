@@ -85,9 +85,9 @@ const Hero = connect(props => (
           <BlockLink
             mr={2}
             py={2}
-            href='https://travis-ci.org/hermanya/rebass-native'>
+            href='https://travis-ci.org/Hermanya/rebass-native'>
             <Image
-              src='https://img.shields.io/travis/hermanya/rebass-native/master.svg'
+              src='https://img.shields.io/travis/Hermanya/rebass-native/master.svg'
             />
           </BlockLink>
           <BlockLink
